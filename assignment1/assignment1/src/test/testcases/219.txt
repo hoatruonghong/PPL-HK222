@@ -1,0 +1,2 @@
+x , y : boolean = true , false ;
+                    a1, a2 : integer = b1, b2 ;

@@ -1,0 +1,9 @@
+
+        main: function void () {  
+                for(i=1+2+3+4-1*2, i<=arr[2], i+arr[i]-1)
+                {
+                    printString(hello);
+                    add(_);
+                    move(___);
+                }
+        }

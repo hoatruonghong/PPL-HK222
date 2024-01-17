@@ -1,0 +1,4 @@
+
+			a: array [5] of integer = {1};
+			main: function void () {}
+		

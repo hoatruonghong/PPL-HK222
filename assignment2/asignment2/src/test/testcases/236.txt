@@ -1,0 +1,5 @@
+
+            main: function void () {
+                str : string = "My name ";
+                str = str :: "is" :: "Hoa" ;            
+            } 

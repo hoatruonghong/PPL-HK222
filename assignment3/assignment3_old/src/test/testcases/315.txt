@@ -1,0 +1,4 @@
+main: function void () {
+                b = a + a1;
+                c = b*a/2.0;
+            }

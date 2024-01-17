@@ -1,0 +1,7 @@
+
+        main: function void () {
+              if (a>b) {}
+              else {
+                print("Value a = ", a);
+              }
+        }

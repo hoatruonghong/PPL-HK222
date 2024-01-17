@@ -1,0 +1,3 @@
+Program([
+	FuncDecl(UPDATE, IntegerType, [Param(Date, IntegerType), Param(n, IntegerType)], None, BlockStmt([CallStmt(calc, Id(Date), Id(n)), ReturnStmt(Id(Date))]))
+])

@@ -1,0 +1,6 @@
+
+            main: function void () {
+              r : float = readFloat();
+              area = pi * sqr(r);
+              printFloat(area);
+            } 

@@ -1,0 +1,8 @@
+
+        main : function void() {
+            for (i = 1, j < 10, i + 1) {
+                writeInt(a);
+            }
+            printInteger();
+        }
+        

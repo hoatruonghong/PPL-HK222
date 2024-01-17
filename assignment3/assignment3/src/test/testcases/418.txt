@@ -1,0 +1,11 @@
+
+		arr: array[2] of integer;
+		a: function integer (x: integer, y: array[2] of integer) {
+			return 1;
+		}
+		main: function void () {
+
+			a(4, arr);
+			return c;
+		}
+		

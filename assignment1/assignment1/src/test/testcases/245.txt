@@ -1,0 +1,5 @@
+
+                main : function void(){
+                    arrayA : array[abc, 2_0] of float;                    
+                }
+            

@@ -1,0 +1,8 @@
+
+		a: integer = m(1);
+		m: function float (b: auto){
+			return b + 1;
+		}
+		
+		main: function void () {}
+		

@@ -1,0 +1,5 @@
+main: function void () {
+                for (i = 100, i > 2, i/2) {
+                    printFloat(1.0e2);
+                }
+            } 

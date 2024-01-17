@@ -1,0 +1,4 @@
+
+        main: function void () {  
+            return result+foo(1,2);
+        }

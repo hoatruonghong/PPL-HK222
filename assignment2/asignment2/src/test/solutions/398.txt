@@ -1,0 +1,4 @@
+Program([
+	FuncDecl(isTriangle, BooleanType, [Param(a, IntegerType), Param(b, IntegerType), Param(c, IntegerType)], None, BlockStmt([IfStmt(BinExpr(||, BinExpr(&&, BinExpr(&&, BinExpr(>, BinExpr(+, Id(a), Id(b)), Id(c)), BinExpr(>, BinExpr(+, Id(b), Id(c)), Id(a))), BinExpr(&&, BinExpr(>, BinExpr(+, Id(a), Id(c)), Id(b)), BinExpr(>=, Id(a), IntegerLit(0)))), BinExpr(||, BinExpr(>=, Id(b), IntegerLit(0)), BinExpr(>=, Id(c), IntegerLit(0)))), ReturnStmt(BooleanLit(True))), ReturnStmt(BooleanLit(False))]))
+	FuncDecl(main, VoidType, [], None, BlockStmt([IfStmt(FuncCall(isTriangle, [Id(x), Id(y), Id(z)]), CallStmt(printString, StringLit(It's a triangle)))]))
+])

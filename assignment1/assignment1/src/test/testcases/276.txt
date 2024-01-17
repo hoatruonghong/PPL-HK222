@@ -1,0 +1,8 @@
+main: function void () {
+                do {
+                    if (a == 10) break;
+                    a = a - 1; 
+                    printInteger(a);
+                }
+                while(a > 0);
+            } 

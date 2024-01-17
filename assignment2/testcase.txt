@@ -1,0 +1,186 @@
+
+    def test_full_2(self):
+        input = """
+        x,y : integer = 65,readInteger();
+        fact : function integer (n : integer) {
+            if (n == 0) return 1;
+            else return n*fact(n-1);
+        }
+        inc : function void (out n: integer, delta: integer){
+            n = n + delta ;
+        }
+        main : function void () {
+            delta : integer = fact(3);
+            inc(x, delta);
+            printInt(x,0);
+        }
+        """
+        expect = """Program([
+	VarDecl(x, IntegerType, IntegerLit(65))
+	VarDecl(y, IntegerType, FuncCall(readInteger, []))
+	FuncDecl(fact, IntegerType, [Param(n, IntegerType)], None, BlockStmt([IfStmt(BinExpr(==, Id(n), IntegerLit(0)), ReturnStmt(IntegerLit(1)), ReturnStmt(BinExpr(*, Id(n), FuncCall(fact, [BinExpr(-, Id(n), IntegerLit(1))]))))]))
+	FuncDecl(inc, VoidType, [OutParam(n, IntegerType), Param(delta, IntegerType)], None, BlockStmt([AssignStmt(Id(n), BinExpr(+, Id(n), Id(delta)))]))
+	FuncDecl(main, VoidType, [], None, BlockStmt([VarDecl(delta, IntegerType, FuncCall(fact, [IntegerLit(3)])), CallStmt(inc, Id(x), Id(delta)), CallStmt(printInt, Id(x), IntegerLit(0))]))
+])"""
+        self.assertTrue(TestAST.test(input, expect, 300))
+
+    def test_full_3(self):
+        input = """
+                    /* Kiem tra mang cap so cong  */
+            isEmpty: function boolean (arr: array[10] of integer) {   
+                return true;
+            }         
+            readArray : function void(out arr: array[10] of integer){
+                
+            }
+            isArithmeticProgression: function boolean (arr: array[100] of integer) {
+                if (isEmpty(arr)) return false;
+                flag : boolean = true;
+                i, n, d: integer = 2, len(arr), arr[1]-arr[0];
+                
+                while (i < n) {
+                    if (arr[i]-arr[i-1] != d) flag = false;
+                    if (flag == false) return false;
+                    i = i +1;
+                }
+            }
+            main:  function void() {
+                Array : array [100] of integer;
+                readArray(Array);
+                if (isArithmeticProgression) printString("This is an arithmetic progression !");
+                return;
+            }
+        """
+        expect = """Program([
+	FuncDecl(isEmpty, BooleanType, [Param(arr, ArrayType([10], IntegerType))], None, BlockStmt([ReturnStmt(BooleanLit(True))]))
+	FuncDecl(readArray, VoidType, [OutParam(arr, ArrayType([10], IntegerType))], None, BlockStmt([]))
+	FuncDecl(isArithmeticProgression, BooleanType, [Param(arr, ArrayType([100], IntegerType))], None, BlockStmt([IfStmt(FuncCall(isEmpty, [Id(arr)]), ReturnStmt(BooleanLit(False))), VarDecl(flag, BooleanType, BooleanLit(True)), VarDecl(i, IntegerType, IntegerLit(2)), VarDecl(n, IntegerType, FuncCall(len, [Id(arr)])), VarDecl(d, IntegerType, BinExpr(-, ArrayCell(arr, [IntegerLit(1)]), ArrayCell(arr, [IntegerLit(0)]))), WhileStmt(BinExpr(<, Id(i), Id(n)), BlockStmt([IfStmt(BinExpr(!=, BinExpr(-, ArrayCell(arr, [Id(i)]), ArrayCell(arr, [BinExpr(-, Id(i), IntegerLit(1))])), Id(d)), AssignStmt(Id(flag), BooleanLit(False))), IfStmt(BinExpr(==, Id(flag), BooleanLit(False)), ReturnStmt(BooleanLit(False))), AssignStmt(Id(i), BinExpr(+, Id(i), IntegerLit(1)))]))]))
+	FuncDecl(main, VoidType, [], None, BlockStmt([VarDecl(A, ArrayType([100], IntegerType)), VarDecl(r, ArrayType([100], IntegerType)), VarDecl(r, ArrayType([100], IntegerType)), VarDecl(a, ArrayType([100], IntegerType)), VarDecl(y, ArrayType([100], IntegerType)), CallStmt(readArray, Id(Array)), IfStmt(Id(isArithmeticProgression), CallStmt(printString, StringLit(This is an arithmetic progression !))), ReturnStmt()]))
+])"""
+        self.assertTrue(TestAST.test(input, expect, 300))
+
+    def test_full_4(self):
+        input = """
+            count_occurrences : function integer(out a : array[10] of integer, out x : integer,lo: integer,hi:integer) {
+                if( lo > hi) return 0;
+                mid: integer = floor((lo+hi)/2);
+                if (a[mid] < x) 
+                    return count_occurrences(a,x,mid+1,hi);
+                else if (a[mid]>x)
+                    return count_occurrences(a,x,lo,mid-1);
+                else {
+                    return 1 + count_occurrences(a,x,lo,mid-1) + count_occurrences(a,x,mid+1,hi);
+                    //end else
+                } 
+            }
+            /* in the main function, we call it */
+            main: function void() {                
+                print(count_occurrences(arr,5,0,len(a)-1));
+                return;
+            }
+        """
+        expect = """Program([
+	FuncDecl(count_occurrences, IntegerType, [OutParam(a, ArrayType([10], IntegerType)), OutParam(x, IntegerType), Param(lo, IntegerType), Param(hi, IntegerType)], None, BlockStmt([IfStmt(BinExpr(>, Id(lo), Id(hi)), ReturnStmt(IntegerLit(0))), VarDecl(mid, IntegerType, FuncCall(floor, [BinExpr(/, BinExpr(+, Id(lo), Id(hi)), IntegerLit(2))])), IfStmt(BinExpr(<, ArrayCell(a, [Id(mid)]), Id(x)), ReturnStmt(FuncCall(count_occurrences, [Id(a), Id(x), BinExpr(+, Id(mid), IntegerLit(1)), Id(hi)])), IfStmt(BinExpr(>, ArrayCell(a, [Id(mid)]), Id(x)), ReturnStmt(FuncCall(count_occurrences, [Id(a), Id(x), Id(lo), BinExpr(-, Id(mid), IntegerLit(1))])), BlockStmt([ReturnStmt(BinExpr(+, BinExpr(+, IntegerLit(1), FuncCall(count_occurrences, [Id(a), Id(x), Id(lo), BinExpr(-, Id(mid), IntegerLit(1))])), FuncCall(count_occurrences, [Id(a), Id(x), BinExpr(+, Id(mid), IntegerLit(1)), Id(hi)])))])))]))
+	FuncDecl(main, VoidType, [], None, BlockStmt([CallStmt(print, FuncCall(count_occurrences, [Id(arr), IntegerLit(5), IntegerLit(0), BinExpr(-, FuncCall(len, [Id(a)]), IntegerLit(1))])), ReturnStmt()]))
+])"""
+        self.assertTrue(TestAST.test(input, expect, 300))
+
+    def test_full_5(self):
+        input = """
+            main : function void() {
+                a, b, c, delta, root1, root2, realPart, iPart : float;
+                printString("Enter coefficients a, b, c: ");
+                a = readFloat();
+                b = readFloat();
+                c = readFloat();
+                delta = b*n - 4*a*c;
+                // condition for real and different roots
+                if (delta > 0) {
+                    root1 = (-b+sqrt(delta))/(2*a);
+                    root2 = (-b-sqrt(delta))/(2*a);
+                    print("root1 = ", root1," and root2 = ", root2); 
+                }
+                else if (delta == 0) {
+                    root1 = -b/(2*a);
+                    root2 = root1;
+                    print("root1 = ", root1," and root2 = ", root2);                     
+                }
+                else // if roots are not real
+                {
+                    realPart = -b/(2*a);
+                    iPart = sqrt(-delta)/(2*a);
+                    print("root1 = ", realPart+iPart," and root2 = ",  realPart-iPart);                     
+                }
+            }
+        """
+        expect = """Program([
+	FuncDecl(main, VoidType, [], None, BlockStmt([VarDecl(a, FloatType), VarDecl(b, FloatType), VarDecl(c, FloatType), VarDecl(d, FloatType), VarDecl(e, FloatType), VarDecl(l, FloatType), VarDecl(t, FloatType), VarDecl(a, FloatType), VarDecl(r, FloatType), VarDecl(o, FloatType), VarDecl(o, FloatType), VarDecl(t, FloatType), VarDecl(1, FloatType), VarDecl(r, FloatType), VarDecl(o, FloatType), VarDecl(o, FloatType), VarDecl(t, FloatType), VarDecl(2, FloatType), VarDecl(r, FloatType), VarDecl(e, FloatType), VarDecl(a, FloatType), VarDecl(l, FloatType), VarDecl(P, FloatType), VarDecl(a, FloatType), VarDecl(r, FloatType), VarDecl(t, FloatType), VarDecl(i, FloatType), VarDecl(P, FloatType), VarDecl(a, FloatType), VarDecl(r, FloatType), VarDecl(t, FloatType), CallStmt(printString, StringLit(Enter coefficients a, b, c: )), AssignStmt(Id(a), FuncCall(readFloat, [])), AssignStmt(Id(b), FuncCall(readFloat, [])), AssignStmt(Id(c), FuncCall(readFloat, [])), AssignStmt(Id(delta), BinExpr(-, BinExpr(*, Id(b), Id(n)), BinExpr(*, BinExpr(*, IntegerLit(4), Id(a)), Id(c)))), IfStmt(BinExpr(>, Id(delta), IntegerLit(0)), BlockStmt([AssignStmt(Id(root1), BinExpr(/, BinExpr(+, UnExpr(-, Id(b)), FuncCall(sqrt, [Id(delta)])), BinExpr(*, IntegerLit(2), Id(a)))), AssignStmt(Id(root2), BinExpr(/, BinExpr(-, UnExpr(-, Id(b)), FuncCall(sqrt, [Id(delta)])), BinExpr(*, IntegerLit(2), Id(a)))), CallStmt(print, StringLit(root1 = ), Id(root1), StringLit( and root2 = ), Id(root2))]), IfStmt(BinExpr(==, Id(delta), IntegerLit(0)), BlockStmt([AssignStmt(Id(root1), BinExpr(/, UnExpr(-, Id(b)), BinExpr(*, IntegerLit(2), Id(a)))), AssignStmt(Id(root2), Id(root1)), CallStmt(print, StringLit(root1 = ), Id(root1), StringLit( and root2 = ), Id(root2))]), BlockStmt([AssignStmt(Id(realPart), BinExpr(/, UnExpr(-, Id(b)), BinExpr(*, IntegerLit(2), Id(a)))), AssignStmt(Id(iPart), BinExpr(/, FuncCall(sqrt, [UnExpr(-, Id(delta))]), BinExpr(*, IntegerLit(2), Id(a)))), CallStmt(print, StringLit(root1 = ), BinExpr(+, Id(realPart), Id(iPart)), StringLit( and root2 = ), BinExpr(-, Id(realPart), Id(iPart)))])))]))
+])"""
+        self.assertTrue(TestAST.test(input, expect, 300))
+
+    def test_full_6(self):
+        input = """
+            /*Check whether a,b,c are triangle's edges or not
+            
+            */
+            isTriangle: function boolean(a: integer, b:integer, c: integer){
+                if ( (((a+b > c) && (b+c>a)) && ((a+c > b) && (a >= 0))) || ((b >=0 )|| (c >= 0)) ) return true;
+                return false;
+            }
+            main: function void(){
+                if (isTriangle(x,y,z))
+                printString("It's a triangle");
+                /*
+                print if it is not a triangle
+                */
+            }
+        """
+        expect = """Program([
+	FuncDecl(isTriangle, BooleanType, [Param(a, IntegerType), Param(b, IntegerType), Param(c, IntegerType)], None, BlockStmt([IfStmt(BinExpr(-, BinExpr(+, BinExpr(+, BinExpr(>, BinExpr(+, Id(a), Id(b)), Id(c)), BinExpr(>, BinExpr(+, Id(b), Id(c)), Id(a))), BinExpr(+, BinExpr(>, BinExpr(+, Id(a), Id(c)), Id(b)), BinExpr(>=, Id(a), IntegerLit(0)))), BinExpr(-, BinExpr(>=, Id(b), IntegerLit(0)), BinExpr(>=, Id(c), IntegerLit(0)))), ReturnStmt(BooleanLit(True))), ReturnStmt(BooleanLit(False))]))
+	FuncDecl(main, VoidType, [], None, BlockStmt([IfStmt(FuncCall(isTriangle, [Id(x), Id(y), Id(z)]), CallStmt(printString, StringLit(It's a triangle)))]))
+])"""
+        self.assertTrue(TestAST.test(input, expect, 300))
+
+    def test_full_7(self):
+        input = """
+            main : function void() {
+                x, y : integer = 50, 2;
+                for(i = 0, i < x , i + y){
+                    if (i != 3){
+                        if (arr[i]) {
+                            print("Hello world");
+                            y = y + 1;
+                        }
+                    }
+                    else break;
+                }
+                print(a[a[a[y]]]);
+            }
+        """
+        expect = """Program([
+	FuncDecl(main, VoidType, [], None, BlockStmt([VarDecl(x, IntegerType, IntegerLit(50)), VarDecl(y, IntegerType, IntegerLit(2)), ForStmt(AssignStmt(Id(i), IntegerLit(0)), BinExpr(<, Id(i), Id(x)), BinExpr(+, Id(i), Id(y)), BlockStmt([IfStmt(BinExpr(!=, Id(i), IntegerLit(3)), BlockStmt([IfStmt(ArrayCell(arr, [Id(i)]), BlockStmt([CallStmt(print, StringLit(Hello world)), AssignStmt(Id(y), BinExpr(+, Id(y), IntegerLit(1)))]))]), BreakStmt())])), CallStmt(print, ArrayCell(a, [ArrayCell(a, [ArrayCell(a, [Id(y)])])]))]))
+])"""
+        self.assertTrue(TestAST.test(input, expect, 300))
+
+    def test_full_8(self):
+        input = """
+            fact : function integer(n : integer) {
+                a = x || y && z != x;
+                if ((n == 1 )||(n == 0)) return 1;
+                return n * fact(n-1);
+            }
+            main : function void() {
+                number : integer;
+                number = readInteger();
+                printInteger(fact(number));
+                printInteger(fact(1)*fact(2)*fact(3));
+                return;
+            }
+        """
+        expect = """Program([
+	FuncDecl(fact, IntegerType, [Param(n, IntegerType)], None, BlockStmt([AssignStmt(Id(a), BinExpr(!=, BinExpr(+, BinExpr(-, Id(x), Id(y)), Id(z)), Id(x))), IfStmt(BinExpr(-, BinExpr(==, Id(n), IntegerLit(1)), BinExpr(==, Id(n), IntegerLit(0))), ReturnStmt(IntegerLit(1))), ReturnStmt(BinExpr(*, Id(n), FuncCall(fact, [BinExpr(-, Id(n), IntegerLit(1))])))]))
+	FuncDecl(main, VoidType, [], None, BlockStmt([VarDecl(n, IntegerType), VarDecl(u, IntegerType), VarDecl(m, IntegerType), VarDecl(b, IntegerType), VarDecl(e, IntegerType), VarDecl(r, IntegerType), AssignStmt(Id(number), FuncCall(readInteger, [])), CallStmt(printInteger, FuncCall(fact, [Id(number)])), CallStmt(printInteger, BinExpr(*, BinExpr(*, FuncCall(fact, [IntegerLit(1)]), FuncCall(fact, [IntegerLit(2)])), FuncCall(fact, [IntegerLit(3)]))), ReturnStmt()]))
+])"""
+        self.assertTrue(TestAST.test(input, expect, 300))
+
+    

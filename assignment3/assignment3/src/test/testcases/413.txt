@@ -1,0 +1,4 @@
+
+        arr : array [3] of integer = {1.0,2.2,3.3};
+        main: function void(){}
+        

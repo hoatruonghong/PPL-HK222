@@ -1,0 +1,6 @@
+
+            main : function void() {
+            foo(2__0 + -x_1, 4.0e-2 / y2);
+            goo();
+            return ;
+        } 

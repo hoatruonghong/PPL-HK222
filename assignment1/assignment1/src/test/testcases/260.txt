@@ -1,0 +1,7 @@
+main: function void () {
+                if (a>b) {
+                    if (true) printString("TRUE"); 
+                }
+                else if (a <= 0) printBoolean(value);
+                else a = -a;
+            } 

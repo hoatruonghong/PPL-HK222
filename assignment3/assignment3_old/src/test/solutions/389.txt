@@ -1,0 +1,3 @@
+Program([
+	FuncDecl(main, VoidType, [], None, BlockStmt([AssignStmt(Id(x), BinExpr(+, FuncCall(a, []), BinExpr(*, FuncCall(b, []), FuncCall(c, [Id(d)])))), IfStmt(BinExpr(<, Id(x), FuncCall(a, [ArrayCell(arr, [IntegerLit(0), Id(i)])])), ReturnStmt()), AssignStmt(Id(x), BinExpr(/, Id(x), FuncCall(max, [Id(x), BinExpr(+, Id(y), FuncCall(sub, [BinExpr(-, Id(x), Id(y))]))]))), ForStmt(AssignStmt(Id(i), IntegerLit(1)), BinExpr(<, Id(i), Id(n)), BinExpr(/, Id(i), IntegerLit(2)), BlockStmt([BlockStmt([VarDecl(k, IntegerType, IntegerLit(0)), AssignStmt(Id(k), Id(i)), IfStmt(BinExpr(<, Id(k), IntegerLit(10)), BreakStmt())])])), CallStmt(print, StringLit(The result is ), Id(x))]))
+])

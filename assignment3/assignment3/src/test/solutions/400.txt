@@ -1,0 +1,1 @@
+Type mismatch in Variable Declaration: VarDecl(x, FloatType, BooleanLit(True))

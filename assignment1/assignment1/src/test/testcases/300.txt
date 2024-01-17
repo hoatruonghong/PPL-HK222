@@ -1,0 +1,16 @@
+
+            /*Check whether a,b,c are triangle's edges or not
+            
+            */
+            isTriangle: function boolean(a: integer, b:integer, c: integer){
+                if ((a+b > c && b+c >a && a+c > b) && a >= 0 || b >=0 || c >= 0 ) return true;
+                return false;
+            }
+            main: function void(){
+                if (isTriangle(x,y,z))
+                printString("It's a triangle");
+                /*
+                print if it is not a triangle
+                */
+            }
+        

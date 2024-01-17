@@ -1,0 +1,7 @@
+
+        main : function void() {
+            a,b : string = readString(), readString();
+            if (length(a) == length(b)) return;
+            else update();
+        }
+        

@@ -1,0 +1,5 @@
+
+        main: function void () {  
+            a : string = "Hello world";
+            return ((a::"!")::a)::"end";
+        }

@@ -1,0 +1,5 @@
+
+        main: function void () {
+                if (isEmpty(listA)) if (true) print("true"); else print("false");
+                else print(b);             
+        }

@@ -1,0 +1,5 @@
+               
+            printArr: function void(out arr:array[5] of string) 
+                { return (arr[0]);}
+            myPets : array[5] of string = {"Cat", "Dog", "Parot", "Pig", "Ducky"} ;    
+        

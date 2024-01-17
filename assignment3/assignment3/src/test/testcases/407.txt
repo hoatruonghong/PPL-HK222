@@ -1,0 +1,4 @@
+
+        foo: function integer (){}
+        main: function void(){}
+        

@@ -1,0 +1,3 @@
+Program([
+	FuncDecl(main, VoidType, [], None, BlockStmt([ForStmt(AssignStmt(Id(i), Id(n)), BinExpr(>=, Id(i), IntegerLit(0)), BinExpr(-, Id(i), IntegerLit(1)), BlockStmt([CallStmt(printString, BinExpr(::, StringLit(Enter value of line ), FuncCall(tostring, [Id(i)]))), ForStmt(AssignStmt(Id(j), IntegerLit(0)), BinExpr(<, Id(j), Id(n)), BinExpr(+, Id(j), IntegerLit(1)), BlockStmt([CallStmt(Print, StringLit(Enter value of a[), Id(i), StringLit(,), Id(j), StringLit(] : )), AssignStmt(ArrayCell(arr, [Id(i), Id(j)]), FuncCall(readString, []))]))])), CallStmt(print, StringLit(Length of array arr is ), FuncCall(len, [Id(arr)])), ReturnStmt()]))
+])

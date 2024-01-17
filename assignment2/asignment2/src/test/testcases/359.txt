@@ -1,0 +1,5 @@
+
+        main: function void () {  
+                while (arr[a,b] == "Cat")
+                        while (x) print(x);
+        }

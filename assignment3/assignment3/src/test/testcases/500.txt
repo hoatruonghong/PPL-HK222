@@ -1,0 +1,9 @@
+
+		a: integer = 5;
+		b: function auto (i : auto) {
+			return i;
+		}
+		main: function void () {
+			a = b(a) + 1.5;
+		}
+		

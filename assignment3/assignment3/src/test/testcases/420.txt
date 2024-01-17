@@ -1,0 +1,16 @@
+
+		a: integer = 5;
+		foo: function integer (x: integer) {
+			b: auto = 5;
+			x = 5;
+			{
+				c: integer = 5;
+			}
+			{
+				c: float = a + 1.1;
+			}
+
+			return c;
+		}
+			main: function void () {}
+		

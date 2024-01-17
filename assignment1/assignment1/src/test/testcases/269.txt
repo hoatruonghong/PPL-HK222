@@ -1,0 +1,7 @@
+main: function void () {
+                for (i = n, i != 0, i%2) 
+                    a : integer = 0 ;
+                    for(j = 0, i < 100, j+a) {
+                        a = a + n ;    
+                    }
+            } 

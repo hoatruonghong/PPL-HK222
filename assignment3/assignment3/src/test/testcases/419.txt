@@ -1,0 +1,12 @@
+
+		a: integer = 5;
+		b: float = 5.0;
+		c: string = "abc";
+		d: boolean = true;
+		e: array[2] of integer = {1,2};
+		f: array[2,2] of integer = {{1,2},{3,4}};
+
+		g: float = 5;
+		h: float = a + 1;
+		err: integer = 5.0;
+		

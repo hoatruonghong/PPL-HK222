@@ -1,0 +1,6 @@
+Trong cái FuncCall thì là FuncCall(name,[]) hay FuncCall(Id(name),[])
+vì thầy rep class Id được dùng trong expr và lhs, mà funccall là một operand của expr
+
+tương tự với ArrayCell()
+
+

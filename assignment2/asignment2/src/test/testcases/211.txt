@@ -1,0 +1,5 @@
+
+        inc : function integer (_n:integer) {}
+        delta : function float (out a:string, out b: array[10,10] of integer) {}
+        main: function void() {}
+        

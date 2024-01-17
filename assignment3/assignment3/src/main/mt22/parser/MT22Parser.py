@@ -1,0 +1,3865 @@
+# Generated from main/mt22/parser/MT22.g4 by ANTLR 4.9.2
+# encoding: utf-8
+from antlr4 import *
+from io import StringIO
+import sys
+if sys.version_info[1] > 5:
+	from typing import TextIO
+else:
+	from typing.io import TextIO
+
+
+def serializedATN():
+    with StringIO() as buf:
+        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3F")
+        buf.write("\u01d1\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
+        buf.write("\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r\4\16")
+        buf.write("\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22\4\23\t\23")
+        buf.write("\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\4\31")
+        buf.write("\t\31\4\32\t\32\4\33\t\33\4\34\t\34\4\35\t\35\4\36\t\36")
+        buf.write("\4\37\t\37\4 \t \4!\t!\4\"\t\"\4#\t#\4$\t$\4%\t%\4&\t")
+        buf.write("&\4\'\t\'\4(\t(\4)\t)\4*\t*\4+\t+\4,\t,\4-\t-\4.\t.\4")
+        buf.write("/\t/\4\60\t\60\4\61\t\61\4\62\t\62\4\63\t\63\4\64\t\64")
+        buf.write("\3\2\3\2\3\2\3\3\3\3\3\3\3\3\5\3p\n\3\3\4\3\4\5\4t\n\4")
+        buf.write("\3\5\3\5\5\5x\n\5\3\5\3\5\3\6\3\6\3\6\3\6\3\7\3\7\3\7")
+        buf.write("\3\7\5\7\u0084\n\7\3\b\3\b\3\t\3\t\3\t\3\t\3\t\3\t\3\t")
+        buf.write("\3\t\3\t\3\t\3\t\3\t\5\t\u0094\n\t\3\n\3\n\3\n\5\n\u0099")
+        buf.write("\n\n\3\13\3\13\3\13\3\f\3\f\3\f\3\f\3\f\3\f\3\f\3\f\3")
+        buf.write("\f\5\f\u00a7\n\f\3\r\3\r\3\r\3\r\5\r\u00ad\n\r\3\16\3")
+        buf.write("\16\3\17\3\17\3\17\5\17\u00b4\n\17\3\17\3\17\3\17\7\17")
+        buf.write("\u00b9\n\17\f\17\16\17\u00bc\13\17\3\20\5\20\u00bf\n\20")
+        buf.write("\3\20\5\20\u00c2\n\20\3\20\3\20\3\20\3\20\3\21\3\21\3")
+        buf.write("\21\3\21\3\21\7\21\u00cd\n\21\f\21\16\21\u00d0\13\21\3")
+        buf.write("\22\3\22\5\22\u00d4\n\22\3\23\3\23\3\23\3\23\3\23\3\23")
+        buf.write("\3\23\3\23\3\23\3\23\3\23\3\23\3\23\5\23\u00e3\n\23\3")
+        buf.write("\24\3\24\3\25\3\25\3\25\3\25\3\25\3\25\3\25\3\25\3\25")
+        buf.write("\3\25\3\25\3\25\3\25\3\25\3\25\3\25\3\25\3\25\3\25\3\25")
+        buf.write("\3\25\3\25\3\25\3\25\5\25\u00ff\n\25\3\25\3\25\3\25\3")
+        buf.write("\25\5\25\u0105\n\25\3\26\3\26\3\26\3\26\5\26\u010b\n\26")
+        buf.write("\3\26\3\26\3\27\3\27\5\27\u0111\n\27\3\30\3\30\3\30\3")
+        buf.write("\30\3\30\3\30\3\30\5\30\u011a\n\30\3\31\3\31\3\31\3\31")
+        buf.write("\3\31\3\31\3\31\3\31\3\31\3\31\3\32\3\32\3\32\3\32\3\33")
+        buf.write("\3\33\3\34\3\34\5\34\u012e\n\34\3\35\3\35\3\36\3\36\3")
+        buf.write("\37\3\37\3\37\3\37\3\37\3\37\3 \3 \3 \3 \3 \3 \3 \3 \3")
+        buf.write("!\3!\3!\3\"\3\"\3\"\3#\3#\3#\5#\u014b\n#\3#\3#\3$\3$\3")
+        buf.write("$\3$\5$\u0153\n$\3$\3$\3$\3%\3%\3%\5%\u015b\n%\3%\3%\3")
+        buf.write("&\3&\3&\3&\3&\3&\3&\3\'\3\'\3\'\5\'\u0169\n\'\3\'\3\'")
+        buf.write("\3(\3(\3(\3(\3(\3)\3)\3)\3)\5)\u0176\n)\3*\3*\3*\3*\3")
+        buf.write("*\5*\u017d\n*\3+\3+\3+\3+\3+\5+\u0184\n+\3,\3,\3,\3,\3")
+        buf.write(",\5,\u018b\n,\3-\3-\3-\3-\3-\3-\7-\u0193\n-\f-\16-\u0196")
+        buf.write("\13-\3.\3.\3.\3.\3.\3.\7.\u019e\n.\f.\16.\u01a1\13.\3")
+        buf.write("/\3/\3/\3/\3/\3/\7/\u01a9\n/\f/\16/\u01ac\13/\3\60\3\60")
+        buf.write("\3\60\5\60\u01b1\n\60\3\61\3\61\3\61\5\61\u01b6\n\61\3")
+        buf.write("\62\3\62\3\62\3\62\3\62\3\62\3\62\3\62\3\62\3\62\3\62")
+        buf.write("\3\62\3\62\5\62\u01c5\n\62\3\63\3\63\3\63\3\63\5\63\u01cb")
+        buf.write("\n\63\3\63\3\63\3\64\3\64\3\64\2\7\34 XZ\\\65\2\4\6\b")
+        buf.write("\n\f\16\20\22\24\26\30\32\34\36 \"$&(*,.\60\62\64\668")
+        buf.write(":<>@BDFHJLNPRTVXZ\\^`bdf\2\b\3\2\3\6\3\2\638\3\2\61\62")
+        buf.write("\3\2*+\3\2,.\6\2\32\32\35\35!!##\2\u01d9\2h\3\2\2\2\4")
+        buf.write("o\3\2\2\2\6s\3\2\2\2\bw\3\2\2\2\n{\3\2\2\2\f\u0083\3\2")
+        buf.write("\2\2\16\u0085\3\2\2\2\20\u0093\3\2\2\2\22\u0098\3\2\2")
+        buf.write("\2\24\u009a\3\2\2\2\26\u009d\3\2\2\2\30\u00ac\3\2\2\2")
+        buf.write("\32\u00ae\3\2\2\2\34\u00b3\3\2\2\2\36\u00be\3\2\2\2 \u00c7")
+        buf.write("\3\2\2\2\"\u00d3\3\2\2\2$\u00e2\3\2\2\2&\u00e4\3\2\2\2")
+        buf.write("(\u0104\3\2\2\2*\u0106\3\2\2\2,\u0110\3\2\2\2.\u0112\3")
+        buf.write("\2\2\2\60\u011b\3\2\2\2\62\u0125\3\2\2\2\64\u0129\3\2")
+        buf.write("\2\2\66\u012d\3\2\2\28\u012f\3\2\2\2:\u0131\3\2\2\2<\u0133")
+        buf.write("\3\2\2\2>\u0139\3\2\2\2@\u0141\3\2\2\2B\u0144\3\2\2\2")
+        buf.write("D\u0147\3\2\2\2F\u014e\3\2\2\2H\u0157\3\2\2\2J\u015e\3")
+        buf.write("\2\2\2L\u0165\3\2\2\2N\u016c\3\2\2\2P\u0175\3\2\2\2R\u017c")
+        buf.write("\3\2\2\2T\u0183\3\2\2\2V\u018a\3\2\2\2X\u018c\3\2\2\2")
+        buf.write("Z\u0197\3\2\2\2\\\u01a2\3\2\2\2^\u01b0\3\2\2\2`\u01b5")
+        buf.write("\3\2\2\2b\u01c4\3\2\2\2d\u01c6\3\2\2\2f\u01ce\3\2\2\2")
+        buf.write("hi\5\4\3\2ij\7\2\2\3j\3\3\2\2\2kl\5\6\4\2lm\5\4\3\2mp")
+        buf.write("\3\2\2\2np\5\6\4\2ok\3\2\2\2on\3\2\2\2p\5\3\2\2\2qt\5")
+        buf.write("\b\5\2rt\5\24\13\2sq\3\2\2\2sr\3\2\2\2t\7\3\2\2\2ux\5")
+        buf.write("\16\b\2vx\5\n\6\2wu\3\2\2\2wv\3\2\2\2xy\3\2\2\2yz\7\24")
+        buf.write("\2\2z\t\3\2\2\2{|\5\f\7\2|}\7\26\2\2}~\5\22\n\2~\13\3")
+        buf.write("\2\2\2\177\u0080\7@\2\2\u0080\u0081\7\25\2\2\u0081\u0084")
+        buf.write("\5\f\7\2\u0082\u0084\7@\2\2\u0083\177\3\2\2\2\u0083\u0082")
+        buf.write("\3\2\2\2\u0084\r\3\2\2\2\u0085\u0086\5\20\t\2\u0086\17")
+        buf.write("\3\2\2\2\u0087\u0088\7@\2\2\u0088\u0089\7\25\2\2\u0089")
+        buf.write("\u008a\5\20\t\2\u008a\u008b\7\25\2\2\u008b\u008c\5T+\2")
+        buf.write("\u008c\u0094\3\2\2\2\u008d\u008e\7@\2\2\u008e\u008f\7")
+        buf.write("\26\2\2\u008f\u0090\5\22\n\2\u0090\u0091\79\2\2\u0091")
+        buf.write("\u0092\5T+\2\u0092\u0094\3\2\2\2\u0093\u0087\3\2\2\2\u0093")
+        buf.write("\u008d\3\2\2\2\u0094\21\3\2\2\2\u0095\u0099\5f\64\2\u0096")
+        buf.write("\u0099\5J&\2\u0097\u0099\7\30\2\2\u0098\u0095\3\2\2\2")
+        buf.write("\u0098\u0096\3\2\2\2\u0098\u0097\3\2\2\2\u0099\23\3\2")
+        buf.write("\2\2\u009a\u009b\5\26\f\2\u009b\u009c\5\32\16\2\u009c")
+        buf.write("\25\3\2\2\2\u009d\u009e\7@\2\2\u009e\u009f\7\26\2\2\u009f")
+        buf.write("\u00a0\7\37\2\2\u00a0\u00a1\5\30\r\2\u00a1\u00a2\7\r\2")
+        buf.write("\2\u00a2\u00a3\5\34\17\2\u00a3\u00a6\7\16\2\2\u00a4\u00a5")
+        buf.write("\7)\2\2\u00a5\u00a7\7@\2\2\u00a6\u00a4\3\2\2\2\u00a6\u00a7")
+        buf.write("\3\2\2\2\u00a7\27\3\2\2\2\u00a8\u00ad\5f\64\2\u00a9\u00ad")
+        buf.write("\5J&\2\u00aa\u00ad\7$\2\2\u00ab\u00ad\7\30\2\2\u00ac\u00a8")
+        buf.write("\3\2\2\2\u00ac\u00a9\3\2\2\2\u00ac\u00aa\3\2\2\2\u00ac")
+        buf.write("\u00ab\3\2\2\2\u00ad\31\3\2\2\2\u00ae\u00af\5H%\2\u00af")
+        buf.write("\33\3\2\2\2\u00b0\u00b1\b\17\1\2\u00b1\u00b4\5\36\20\2")
+        buf.write("\u00b2\u00b4\3\2\2\2\u00b3\u00b0\3\2\2\2\u00b3\u00b2\3")
+        buf.write("\2\2\2\u00b4\u00ba\3\2\2\2\u00b5\u00b6\f\5\2\2\u00b6\u00b7")
+        buf.write("\7\25\2\2\u00b7\u00b9\5\36\20\2\u00b8\u00b5\3\2\2\2\u00b9")
+        buf.write("\u00bc\3\2\2\2\u00ba\u00b8\3\2\2\2\u00ba\u00bb\3\2\2\2")
+        buf.write("\u00bb\35\3\2\2\2\u00bc\u00ba\3\2\2\2\u00bd\u00bf\7)\2")
+        buf.write("\2\u00be\u00bd\3\2\2\2\u00be\u00bf\3\2\2\2\u00bf\u00c1")
+        buf.write("\3\2\2\2\u00c0\u00c2\7&\2\2\u00c1\u00c0\3\2\2\2\u00c1")
+        buf.write("\u00c2\3\2\2\2\u00c2\u00c3\3\2\2\2\u00c3\u00c4\7@\2\2")
+        buf.write("\u00c4\u00c5\7\26\2\2\u00c5\u00c6\5\22\n\2\u00c6\37\3")
+        buf.write("\2\2\2\u00c7\u00c8\b\21\1\2\u00c8\u00c9\5\"\22\2\u00c9")
+        buf.write("\u00ce\3\2\2\2\u00ca\u00cb\f\4\2\2\u00cb\u00cd\5\"\22")
+        buf.write("\2\u00cc\u00ca\3\2\2\2\u00cd\u00d0\3\2\2\2\u00ce\u00cc")
+        buf.write("\3\2\2\2\u00ce\u00cf\3\2\2\2\u00cf!\3\2\2\2\u00d0\u00ce")
+        buf.write("\3\2\2\2\u00d1\u00d4\5$\23\2\u00d2\u00d4\5\b\5\2\u00d3")
+        buf.write("\u00d1\3\2\2\2\u00d3\u00d2\3\2\2\2\u00d4#\3\2\2\2\u00d5")
+        buf.write("\u00e3\5*\26\2\u00d6\u00e3\5.\30\2\u00d7\u00e3\5\60\31")
+        buf.write("\2\u00d8\u00e3\5<\37\2\u00d9\u00e3\5> \2\u00da\u00e3\5")
+        buf.write("@!\2\u00db\u00e3\5B\"\2\u00dc\u00e3\5D#\2\u00dd\u00e3")
+        buf.write("\5F$\2\u00de\u00e3\5H%\2\u00df\u00e0\5(\25\2\u00e0\u00e1")
+        buf.write("\7\24\2\2\u00e1\u00e3\3\2\2\2\u00e2\u00d5\3\2\2\2\u00e2")
+        buf.write("\u00d6\3\2\2\2\u00e2\u00d7\3\2\2\2\u00e2\u00d8\3\2\2\2")
+        buf.write("\u00e2\u00d9\3\2\2\2\u00e2\u00da\3\2\2\2\u00e2\u00db\3")
+        buf.write("\2\2\2\u00e2\u00dc\3\2\2\2\u00e2\u00dd\3\2\2\2\u00e2\u00de")
+        buf.write("\3\2\2\2\u00e2\u00df\3\2\2\2\u00e3%\3\2\2\2\u00e4\u00e5")
+        buf.write("\t\2\2\2\u00e5\'\3\2\2\2\u00e6\u00e7\7\7\2\2\u00e7\u00e8")
+        buf.write("\7\r\2\2\u00e8\u00e9\5T+\2\u00e9\u00ea\7\16\2\2\u00ea")
+        buf.write("\u0105\3\2\2\2\u00eb\u00ec\7\b\2\2\u00ec\u00ed\7\r\2\2")
+        buf.write("\u00ed\u00ee\5T+\2\u00ee\u00ef\7\16\2\2\u00ef\u0105\3")
+        buf.write("\2\2\2\u00f0\u00f1\7\t\2\2\u00f1\u00f2\7\r\2\2\u00f2\u00f3")
+        buf.write("\5T+\2\u00f3\u00f4\7\16\2\2\u00f4\u0105\3\2\2\2\u00f5")
+        buf.write("\u00f6\7\n\2\2\u00f6\u00f7\7\r\2\2\u00f7\u00f8\5T+\2\u00f8")
+        buf.write("\u00f9\7\16\2\2\u00f9\u0105\3\2\2\2\u00fa\u00fb\7\13\2")
+        buf.write("\2\u00fb\u00fe\7\r\2\2\u00fc\u00ff\3\2\2\2\u00fd\u00ff")
+        buf.write("\5R*\2\u00fe\u00fc\3\2\2\2\u00fe\u00fd\3\2\2\2\u00ff\u0100")
+        buf.write("\3\2\2\2\u0100\u0105\7\16\2\2\u0101\u0102\7\f\2\2\u0102")
+        buf.write("\u0103\7\r\2\2\u0103\u0105\7\16\2\2\u0104\u00e6\3\2\2")
+        buf.write("\2\u0104\u00eb\3\2\2\2\u0104\u00f0\3\2\2\2\u0104\u00f5")
+        buf.write("\3\2\2\2\u0104\u00fa\3\2\2\2\u0104\u0101\3\2\2\2\u0105")
+        buf.write(")\3\2\2\2\u0106\u0107\5,\27\2\u0107\u010a\79\2\2\u0108")
+        buf.write("\u010b\5T+\2\u0109\u010b\5&\24\2\u010a\u0108\3\2\2\2\u010a")
+        buf.write("\u0109\3\2\2\2\u010b\u010c\3\2\2\2\u010c\u010d\7\24\2")
+        buf.write("\2\u010d+\3\2\2\2\u010e\u0111\7@\2\2\u010f\u0111\5N(\2")
+        buf.write("\u0110\u010e\3\2\2\2\u0110\u010f\3\2\2\2\u0111-\3\2\2")
+        buf.write("\2\u0112\u0113\7 \2\2\u0113\u0114\7\r\2\2\u0114\u0115")
+        buf.write("\5T+\2\u0115\u0116\7\16\2\2\u0116\u0119\5$\23\2\u0117")
+        buf.write("\u0118\7\34\2\2\u0118\u011a\5$\23\2\u0119\u0117\3\2\2")
+        buf.write("\2\u0119\u011a\3\2\2\2\u011a/\3\2\2\2\u011b\u011c\7\36")
+        buf.write("\2\2\u011c\u011d\7\r\2\2\u011d\u011e\5\62\32\2\u011e\u011f")
+        buf.write("\7\25\2\2\u011f\u0120\58\35\2\u0120\u0121\7\25\2\2\u0121")
+        buf.write("\u0122\5:\36\2\u0122\u0123\7\16\2\2\u0123\u0124\5$\23")
+        buf.write("\2\u0124\61\3\2\2\2\u0125\u0126\5\64\33\2\u0126\u0127")
+        buf.write("\79\2\2\u0127\u0128\5\66\34\2\u0128\63\3\2\2\2\u0129\u012a")
+        buf.write("\7@\2\2\u012a\65\3\2\2\2\u012b\u012e\7@\2\2\u012c\u012e")
+        buf.write("\5T+\2\u012d\u012b\3\2\2\2\u012d\u012c\3\2\2\2\u012e\67")
+        buf.write("\3\2\2\2\u012f\u0130\5T+\2\u01309\3\2\2\2\u0131\u0132")
+        buf.write("\5T+\2\u0132;\3\2\2\2\u0133\u0134\7%\2\2\u0134\u0135\7")
+        buf.write("\r\2\2\u0135\u0136\5T+\2\u0136\u0137\7\16\2\2\u0137\u0138")
+        buf.write("\5$\23\2\u0138=\3\2\2\2\u0139\u013a\7\33\2\2\u013a\u013b")
+        buf.write("\5H%\2\u013b\u013c\7%\2\2\u013c\u013d\7\r\2\2\u013d\u013e")
+        buf.write("\5T+\2\u013e\u013f\7\16\2\2\u013f\u0140\7\24\2\2\u0140")
+        buf.write("?\3\2\2\2\u0141\u0142\7\31\2\2\u0142\u0143\7\24\2\2\u0143")
+        buf.write("A\3\2\2\2\u0144\u0145\7\'\2\2\u0145\u0146\7\24\2\2\u0146")
+        buf.write("C\3\2\2\2\u0147\u014a\7\"\2\2\u0148\u014b\5T+\2\u0149")
+        buf.write("\u014b\3\2\2\2\u014a\u0148\3\2\2\2\u014a\u0149\3\2\2\2")
+        buf.write("\u014b\u014c\3\2\2\2\u014c\u014d\7\24\2\2\u014dE\3\2\2")
+        buf.write("\2\u014e\u014f\7@\2\2\u014f\u0152\7\r\2\2\u0150\u0153")
+        buf.write("\5R*\2\u0151\u0153\3\2\2\2\u0152\u0150\3\2\2\2\u0152\u0151")
+        buf.write("\3\2\2\2\u0153\u0154\3\2\2\2\u0154\u0155\7\16\2\2\u0155")
+        buf.write("\u0156\7\24\2\2\u0156G\3\2\2\2\u0157\u015a\7\17\2\2\u0158")
+        buf.write("\u015b\5 \21\2\u0159\u015b\3\2\2\2\u015a\u0158\3\2\2\2")
+        buf.write("\u015a\u0159\3\2\2\2\u015b\u015c\3\2\2\2\u015c\u015d\7")
+        buf.write("\20\2\2\u015dI\3\2\2\2\u015e\u015f\7\27\2\2\u015f\u0160")
+        buf.write("\7\21\2\2\u0160\u0161\5P)\2\u0161\u0162\7\22\2\2\u0162")
+        buf.write("\u0163\7(\2\2\u0163\u0164\5f\64\2\u0164K\3\2\2\2\u0165")
+        buf.write("\u0168\7\17\2\2\u0166\u0169\5R*\2\u0167\u0169\3\2\2\2")
+        buf.write("\u0168\u0166\3\2\2\2\u0168\u0167\3\2\2\2\u0169\u016a\3")
+        buf.write("\2\2\2\u016a\u016b\7\20\2\2\u016bM\3\2\2\2\u016c\u016d")
+        buf.write("\7@\2\2\u016d\u016e\7\21\2\2\u016e\u016f\5R*\2\u016f\u0170")
+        buf.write("\7\22\2\2\u0170O\3\2\2\2\u0171\u0172\7:\2\2\u0172\u0173")
+        buf.write("\7\25\2\2\u0173\u0176\5P)\2\u0174\u0176\7:\2\2\u0175\u0171")
+        buf.write("\3\2\2\2\u0175\u0174\3\2\2\2\u0176Q\3\2\2\2\u0177\u0178")
+        buf.write("\5T+\2\u0178\u0179\7\25\2\2\u0179\u017a\5R*\2\u017a\u017d")
+        buf.write("\3\2\2\2\u017b\u017d\5T+\2\u017c\u0177\3\2\2\2\u017c\u017b")
+        buf.write("\3\2\2\2\u017dS\3\2\2\2\u017e\u017f\5V,\2\u017f\u0180")
+        buf.write("\7/\2\2\u0180\u0181\5V,\2\u0181\u0184\3\2\2\2\u0182\u0184")
+        buf.write("\5V,\2\u0183\u017e\3\2\2\2\u0183\u0182\3\2\2\2\u0184U")
+        buf.write("\3\2\2\2\u0185\u0186\5X-\2\u0186\u0187\t\3\2\2\u0187\u0188")
+        buf.write("\5X-\2\u0188\u018b\3\2\2\2\u0189\u018b\5X-\2\u018a\u0185")
+        buf.write("\3\2\2\2\u018a\u0189\3\2\2\2\u018bW\3\2\2\2\u018c\u018d")
+        buf.write("\b-\1\2\u018d\u018e\5Z.\2\u018e\u0194\3\2\2\2\u018f\u0190")
+        buf.write("\f\4\2\2\u0190\u0191\t\4\2\2\u0191\u0193\5Z.\2\u0192\u018f")
+        buf.write("\3\2\2\2\u0193\u0196\3\2\2\2\u0194\u0192\3\2\2\2\u0194")
+        buf.write("\u0195\3\2\2\2\u0195Y\3\2\2\2\u0196\u0194\3\2\2\2\u0197")
+        buf.write("\u0198\b.\1\2\u0198\u0199\5\\/\2\u0199\u019f\3\2\2\2\u019a")
+        buf.write("\u019b\f\4\2\2\u019b\u019c\t\5\2\2\u019c\u019e\5\\/\2")
+        buf.write("\u019d\u019a\3\2\2\2\u019e\u01a1\3\2\2\2\u019f\u019d\3")
+        buf.write("\2\2\2\u019f\u01a0\3\2\2\2\u01a0[\3\2\2\2\u01a1\u019f")
+        buf.write("\3\2\2\2\u01a2\u01a3\b/\1\2\u01a3\u01a4\5^\60\2\u01a4")
+        buf.write("\u01aa\3\2\2\2\u01a5\u01a6\f\4\2\2\u01a6\u01a7\t\6\2\2")
+        buf.write("\u01a7\u01a9\5^\60\2\u01a8\u01a5\3\2\2\2\u01a9\u01ac\3")
+        buf.write("\2\2\2\u01aa\u01a8\3\2\2\2\u01aa\u01ab\3\2\2\2\u01ab]")
+        buf.write("\3\2\2\2\u01ac\u01aa\3\2\2\2\u01ad\u01ae\7\60\2\2\u01ae")
+        buf.write("\u01b1\5^\60\2\u01af\u01b1\5`\61\2\u01b0\u01ad\3\2\2\2")
+        buf.write("\u01b0\u01af\3\2\2\2\u01b1_\3\2\2\2\u01b2\u01b3\7*\2\2")
+        buf.write("\u01b3\u01b6\5`\61\2\u01b4\u01b6\5b\62\2\u01b5\u01b2\3")
+        buf.write("\2\2\2\u01b5\u01b4\3\2\2\2\u01b6a\3\2\2\2\u01b7\u01b8")
+        buf.write("\7\r\2\2\u01b8\u01b9\5T+\2\u01b9\u01ba\7\16\2\2\u01ba")
+        buf.write("\u01c5\3\2\2\2\u01bb\u01c5\7@\2\2\u01bc\u01c5\7:\2\2\u01bd")
+        buf.write("\u01c5\7;\2\2\u01be\u01c5\7?\2\2\u01bf\u01c5\7<\2\2\u01c0")
+        buf.write("\u01c5\5L\'\2\u01c1\u01c5\5N(\2\u01c2\u01c5\5d\63\2\u01c3")
+        buf.write("\u01c5\5&\24\2\u01c4\u01b7\3\2\2\2\u01c4\u01bb\3\2\2\2")
+        buf.write("\u01c4\u01bc\3\2\2\2\u01c4\u01bd\3\2\2\2\u01c4\u01be\3")
+        buf.write("\2\2\2\u01c4\u01bf\3\2\2\2\u01c4\u01c0\3\2\2\2\u01c4\u01c1")
+        buf.write("\3\2\2\2\u01c4\u01c2\3\2\2\2\u01c4\u01c3\3\2\2\2\u01c5")
+        buf.write("c\3\2\2\2\u01c6\u01c7\7@\2\2\u01c7\u01ca\7\r\2\2\u01c8")
+        buf.write("\u01cb\5R*\2\u01c9\u01cb\3\2\2\2\u01ca\u01c8\3\2\2\2\u01ca")
+        buf.write("\u01c9\3\2\2\2\u01cb\u01cc\3\2\2\2\u01cc\u01cd\7\16\2")
+        buf.write("\2\u01cde\3\2\2\2\u01ce\u01cf\t\7\2\2\u01cfg\3\2\2\2&")
+        buf.write("osw\u0083\u0093\u0098\u00a6\u00ac\u00b3\u00ba\u00be\u00c1")
+        buf.write("\u00ce\u00d3\u00e2\u00fe\u0104\u010a\u0110\u0119\u012d")
+        buf.write("\u014a\u0152\u015a\u0168\u0175\u017c\u0183\u018a\u0194")
+        buf.write("\u019f\u01aa\u01b0\u01b5\u01c4\u01ca")
+        return buf.getvalue()
+
+
+class MT22Parser ( Parser ):
+
+    grammarFileName = "MT22.g4"
+
+    atn = ATNDeserializer().deserialize(serializedATN())
+
+    decisionsToDFA = [ DFA(ds, i) for i, ds in enumerate(atn.decisionToState) ]
+
+    sharedContextCache = PredictionContextCache()
+
+    literalNames = [ "<INVALID>", "'readInteger()'", "'readFloat()'", "'readBoolean()'", 
+                     "'readString()'", "'printInteger'", "'printFloat'", 
+                     "'printBoolean'", "'printString'", "'super'", "'preventDefault'", 
+                     "'('", "')'", "'{'", "'}'", "'['", "']'", "'.'", "';'", 
+                     "','", "':'", "'array'", "'auto'", "'break'", "'boolean'", 
+                     "'do'", "'else'", "'float'", "'for'", "'function'", 
+                     "'if'", "'integer'", "'return'", "'string'", "'void'", 
+                     "'while'", "'out'", "'continue'", "'of'", "'inherit'", 
+                     "'-'", "'+'", "'*'", "'/'", "'%'", "'::'", "'!'", "'&&'", 
+                     "'||'", "'=='", "'!='", "'<'", "'>'", "'<='", "'>='", 
+                     "'='", "<INVALID>", "<INVALID>", "<INVALID>", "'true'", 
+                     "'false'" ]
+
+    symbolicNames = [ "<INVALID>", "ReadInteger", "ReadFloat", "ReadBoolean", 
+                      "ReadString", "PrintInteger", "PrintFloat", "PrintBoolean", 
+                      "PrintString", "Super", "PreventDefault", "LB", "RB", 
+                      "LP", "RP", "LSB", "RSB", "DOT", "SEMI", "COMMA", 
+                      "COLON", "ARRAY", "AUTO", "BREAK", "BOOLEAN", "DO", 
+                      "ELSE", "FLOAT", "FOR", "FUNCTION", "IF", "INTEGER", 
+                      "RETURN", "STRING", "VOID", "WHILE", "OUT", "CONTINUE", 
+                      "OF", "INHERIT", "SUB", "ADD", "MUL", "DIV", "MOD", 
+                      "CONCATE", "NOT", "AND", "OR", "EQ", "NEQ", "LT", 
+                      "GT", "LEQ", "GEQ", "ASSIGN", "INTLIT", "FLOATLIT", 
+                      "BOOLIT", "TRUE", "FALSE", "STRINGLIT", "ID", "CMT", 
+                      "BLOCKCMT", "WS", "ILLEGAL_ESCAPE", "UNCLOSED_STRING", 
+                      "ERROR_CHAR" ]
+
+    RULE_program = 0
+    RULE_decls = 1
+    RULE_decl = 2
+    RULE_vardecl = 3
+    RULE_vardecl_no_assign = 4
+    RULE_idlist = 5
+    RULE_vardecl_assign = 6
+    RULE_varlist = 7
+    RULE_vartype = 8
+    RULE_funcdecl = 9
+    RULE_funcprototype = 10
+    RULE_functype = 11
+    RULE_funcbody = 12
+    RULE_paramlist = 13
+    RULE_paramdecl = 14
+    RULE_stmts = 15
+    RULE_stmt_vardecl = 16
+    RULE_stmt = 17
+    RULE_specialfunc_r = 18
+    RULE_specialfunc_c = 19
+    RULE_assignstmt = 20
+    RULE_lhs = 21
+    RULE_ifstmt = 22
+    RULE_forstmt = 23
+    RULE_init_for = 24
+    RULE_scalarvar = 25
+    RULE_intexpr = 26
+    RULE_condexpr = 27
+    RULE_updateexpr = 28
+    RULE_whilestmt = 29
+    RULE_dowhilestmt = 30
+    RULE_breakstmt = 31
+    RULE_continuestmt = 32
+    RULE_returnstmt = 33
+    RULE_callstmt = 34
+    RULE_blockstmt = 35
+    RULE_arraytype = 36
+    RULE_arraylit = 37
+    RULE_arrayidx = 38
+    RULE_intlist = 39
+    RULE_exprlist = 40
+    RULE_expr = 41
+    RULE_exp1 = 42
+    RULE_exp2 = 43
+    RULE_exp3 = 44
+    RULE_exp4 = 45
+    RULE_exp5 = 46
+    RULE_exp6 = 47
+    RULE_exp = 48
+    RULE_funccall = 49
+    RULE_primtype = 50
+
+    ruleNames =  [ "program", "decls", "decl", "vardecl", "vardecl_no_assign", 
+                   "idlist", "vardecl_assign", "varlist", "vartype", "funcdecl", 
+                   "funcprototype", "functype", "funcbody", "paramlist", 
+                   "paramdecl", "stmts", "stmt_vardecl", "stmt", "specialfunc_r", 
+                   "specialfunc_c", "assignstmt", "lhs", "ifstmt", "forstmt", 
+                   "init_for", "scalarvar", "intexpr", "condexpr", "updateexpr", 
+                   "whilestmt", "dowhilestmt", "breakstmt", "continuestmt", 
+                   "returnstmt", "callstmt", "blockstmt", "arraytype", "arraylit", 
+                   "arrayidx", "intlist", "exprlist", "expr", "exp1", "exp2", 
+                   "exp3", "exp4", "exp5", "exp6", "exp", "funccall", "primtype" ]
+
+    EOF = Token.EOF
+    ReadInteger=1
+    ReadFloat=2
+    ReadBoolean=3
+    ReadString=4
+    PrintInteger=5
+    PrintFloat=6
+    PrintBoolean=7
+    PrintString=8
+    Super=9
+    PreventDefault=10
+    LB=11
+    RB=12
+    LP=13
+    RP=14
+    LSB=15
+    RSB=16
+    DOT=17
+    SEMI=18
+    COMMA=19
+    COLON=20
+    ARRAY=21
+    AUTO=22
+    BREAK=23
+    BOOLEAN=24
+    DO=25
+    ELSE=26
+    FLOAT=27
+    FOR=28
+    FUNCTION=29
+    IF=30
+    INTEGER=31
+    RETURN=32
+    STRING=33
+    VOID=34
+    WHILE=35
+    OUT=36
+    CONTINUE=37
+    OF=38
+    INHERIT=39
+    SUB=40
+    ADD=41
+    MUL=42
+    DIV=43
+    MOD=44
+    CONCATE=45
+    NOT=46
+    AND=47
+    OR=48
+    EQ=49
+    NEQ=50
+    LT=51
+    GT=52
+    LEQ=53
+    GEQ=54
+    ASSIGN=55
+    INTLIT=56
+    FLOATLIT=57
+    BOOLIT=58
+    TRUE=59
+    FALSE=60
+    STRINGLIT=61
+    ID=62
+    CMT=63
+    BLOCKCMT=64
+    WS=65
+    ILLEGAL_ESCAPE=66
+    UNCLOSED_STRING=67
+    ERROR_CHAR=68
+
+    def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
+        super().__init__(input, output)
+        self.checkVersion("4.9.2")
+        self._interp = ParserATNSimulator(self, self.atn, self.decisionsToDFA, self.sharedContextCache)
+        self._predicates = None
+
+
+
+
+    class ProgramContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def decls(self):
+            return self.getTypedRuleContext(MT22Parser.DeclsContext,0)
+
+
+        def EOF(self):
+            return self.getToken(MT22Parser.EOF, 0)
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_program
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitProgram" ):
+                return visitor.visitProgram(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def program(self):
+
+        localctx = MT22Parser.ProgramContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 0, self.RULE_program)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 102
+            self.decls()
+            self.state = 103
+            self.match(MT22Parser.EOF)
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class DeclsContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def decl(self):
+            return self.getTypedRuleContext(MT22Parser.DeclContext,0)
+
+
+        def decls(self):
+            return self.getTypedRuleContext(MT22Parser.DeclsContext,0)
+
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_decls
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDecls" ):
+                return visitor.visitDecls(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def decls(self):
+
+        localctx = MT22Parser.DeclsContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 2, self.RULE_decls)
+        try:
+            self.state = 109
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,0,self._ctx)
+            if la_ == 1:
+                self.enterOuterAlt(localctx, 1)
+                self.state = 105
+                self.decl()
+                self.state = 106
+                self.decls()
+                pass
+
+            elif la_ == 2:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 108
+                self.decl()
+                pass
+
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class DeclContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def vardecl(self):
+            return self.getTypedRuleContext(MT22Parser.VardeclContext,0)
+
+
+        def funcdecl(self):
+            return self.getTypedRuleContext(MT22Parser.FuncdeclContext,0)
+
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_decl
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDecl" ):
+                return visitor.visitDecl(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def decl(self):
+
+        localctx = MT22Parser.DeclContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 4, self.RULE_decl)
+        try:
+            self.state = 113
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,1,self._ctx)
+            if la_ == 1:
+                self.enterOuterAlt(localctx, 1)
+                self.state = 111
+                self.vardecl()
+                pass
+
+            elif la_ == 2:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 112
+                self.funcdecl()
+                pass
+
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class VardeclContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def SEMI(self):
+            return self.getToken(MT22Parser.SEMI, 0)
+
+        def vardecl_assign(self):
+            return self.getTypedRuleContext(MT22Parser.Vardecl_assignContext,0)
+
+
+        def vardecl_no_assign(self):
+            return self.getTypedRuleContext(MT22Parser.Vardecl_no_assignContext,0)
+
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_vardecl
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVardecl" ):
+                return visitor.visitVardecl(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def vardecl(self):
+
+        localctx = MT22Parser.VardeclContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 6, self.RULE_vardecl)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 117
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,2,self._ctx)
+            if la_ == 1:
+                self.state = 115
+                self.vardecl_assign()
+                pass
+
+            elif la_ == 2:
+                self.state = 116
+                self.vardecl_no_assign()
+                pass
+
+
+            self.state = 119
+            self.match(MT22Parser.SEMI)
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class Vardecl_no_assignContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def idlist(self):
+            return self.getTypedRuleContext(MT22Parser.IdlistContext,0)
+
+
+        def COLON(self):
+            return self.getToken(MT22Parser.COLON, 0)
+
+        def vartype(self):
+            return self.getTypedRuleContext(MT22Parser.VartypeContext,0)
+
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_vardecl_no_assign
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVardecl_no_assign" ):
+                return visitor.visitVardecl_no_assign(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def vardecl_no_assign(self):
+
+        localctx = MT22Parser.Vardecl_no_assignContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 8, self.RULE_vardecl_no_assign)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 121
+            self.idlist()
+            self.state = 122
+            self.match(MT22Parser.COLON)
+            self.state = 123
+            self.vartype()
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class IdlistContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def ID(self):
+            return self.getToken(MT22Parser.ID, 0)
+
+        def COMMA(self):
+            return self.getToken(MT22Parser.COMMA, 0)
+
+        def idlist(self):
+            return self.getTypedRuleContext(MT22Parser.IdlistContext,0)
+
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_idlist
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIdlist" ):
+                return visitor.visitIdlist(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def idlist(self):
+
+        localctx = MT22Parser.IdlistContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 10, self.RULE_idlist)
+        try:
+            self.state = 129
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,3,self._ctx)
+            if la_ == 1:
+                self.enterOuterAlt(localctx, 1)
+                self.state = 125
+                self.match(MT22Parser.ID)
+                self.state = 126
+                self.match(MT22Parser.COMMA)
+                self.state = 127
+                self.idlist()
+                pass
+
+            elif la_ == 2:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 128
+                self.match(MT22Parser.ID)
+                pass
+
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class Vardecl_assignContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def varlist(self):
+            return self.getTypedRuleContext(MT22Parser.VarlistContext,0)
+
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_vardecl_assign
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVardecl_assign" ):
+                return visitor.visitVardecl_assign(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def vardecl_assign(self):
+
+        localctx = MT22Parser.Vardecl_assignContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 12, self.RULE_vardecl_assign)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 131
+            self.varlist()
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class VarlistContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def ID(self):
+            return self.getToken(MT22Parser.ID, 0)
+
+        def COMMA(self, i:int=None):
+            if i is None:
+                return self.getTokens(MT22Parser.COMMA)
+            else:
+                return self.getToken(MT22Parser.COMMA, i)
+
+        def varlist(self):
+            return self.getTypedRuleContext(MT22Parser.VarlistContext,0)
+
+
+        def expr(self):
+            return self.getTypedRuleContext(MT22Parser.ExprContext,0)
+
+
+        def COLON(self):
+            return self.getToken(MT22Parser.COLON, 0)
+
+        def vartype(self):
+            return self.getTypedRuleContext(MT22Parser.VartypeContext,0)
+
+
+        def ASSIGN(self):
+            return self.getToken(MT22Parser.ASSIGN, 0)
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_varlist
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVarlist" ):
+                return visitor.visitVarlist(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def varlist(self):
+
+        localctx = MT22Parser.VarlistContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 14, self.RULE_varlist)
+        try:
+            self.state = 145
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,4,self._ctx)
+            if la_ == 1:
+                self.enterOuterAlt(localctx, 1)
+                self.state = 133
+                self.match(MT22Parser.ID)
+                self.state = 134
+                self.match(MT22Parser.COMMA)
+                self.state = 135
+                self.varlist()
+                self.state = 136
+                self.match(MT22Parser.COMMA)
+                self.state = 137
+                self.expr()
+                pass
+
+            elif la_ == 2:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 139
+                self.match(MT22Parser.ID)
+                self.state = 140
+                self.match(MT22Parser.COLON)
+                self.state = 141
+                self.vartype()
+                self.state = 142
+                self.match(MT22Parser.ASSIGN)
+                self.state = 143
+                self.expr()
+                pass
+
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class VartypeContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def primtype(self):
+            return self.getTypedRuleContext(MT22Parser.PrimtypeContext,0)
+
+
+        def arraytype(self):
+            return self.getTypedRuleContext(MT22Parser.ArraytypeContext,0)
+
+
+        def AUTO(self):
+            return self.getToken(MT22Parser.AUTO, 0)
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_vartype
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVartype" ):
+                return visitor.visitVartype(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def vartype(self):
+
+        localctx = MT22Parser.VartypeContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 16, self.RULE_vartype)
+        try:
+            self.state = 150
+            self._errHandler.sync(self)
+            token = self._input.LA(1)
+            if token in [MT22Parser.BOOLEAN, MT22Parser.FLOAT, MT22Parser.INTEGER, MT22Parser.STRING]:
+                self.enterOuterAlt(localctx, 1)
+                self.state = 147
+                self.primtype()
+                pass
+            elif token in [MT22Parser.ARRAY]:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 148
+                self.arraytype()
+                pass
+            elif token in [MT22Parser.AUTO]:
+                self.enterOuterAlt(localctx, 3)
+                self.state = 149
+                self.match(MT22Parser.AUTO)
+                pass
+            else:
+                raise NoViableAltException(self)
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class FuncdeclContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def funcprototype(self):
+            return self.getTypedRuleContext(MT22Parser.FuncprototypeContext,0)
+
+
+        def funcbody(self):
+            return self.getTypedRuleContext(MT22Parser.FuncbodyContext,0)
+
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_funcdecl
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFuncdecl" ):
+                return visitor.visitFuncdecl(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def funcdecl(self):
+
+        localctx = MT22Parser.FuncdeclContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 18, self.RULE_funcdecl)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 152
+            self.funcprototype()
+            self.state = 153
+            self.funcbody()
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class FuncprototypeContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def ID(self, i:int=None):
+            if i is None:
+                return self.getTokens(MT22Parser.ID)
+            else:
+                return self.getToken(MT22Parser.ID, i)
+
+        def COLON(self):
+            return self.getToken(MT22Parser.COLON, 0)
+
+        def FUNCTION(self):
+            return self.getToken(MT22Parser.FUNCTION, 0)
+
+        def functype(self):
+            return self.getTypedRuleContext(MT22Parser.FunctypeContext,0)
+
+
+        def LB(self):
+            return self.getToken(MT22Parser.LB, 0)
+
+        def paramlist(self):
+            return self.getTypedRuleContext(MT22Parser.ParamlistContext,0)
+
+
+        def RB(self):
+            return self.getToken(MT22Parser.RB, 0)
+
+        def INHERIT(self):
+            return self.getToken(MT22Parser.INHERIT, 0)
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_funcprototype
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFuncprototype" ):
+                return visitor.visitFuncprototype(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def funcprototype(self):
+
+        localctx = MT22Parser.FuncprototypeContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 20, self.RULE_funcprototype)
+        self._la = 0 # Token type
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 155
+            self.match(MT22Parser.ID)
+            self.state = 156
+            self.match(MT22Parser.COLON)
+            self.state = 157
+            self.match(MT22Parser.FUNCTION)
+            self.state = 158
+            self.functype()
+            self.state = 159
+            self.match(MT22Parser.LB)
+            self.state = 160
+            self.paramlist(0)
+            self.state = 161
+            self.match(MT22Parser.RB)
+            self.state = 164
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            if _la==MT22Parser.INHERIT:
+                self.state = 162
+                self.match(MT22Parser.INHERIT)
+                self.state = 163
+                self.match(MT22Parser.ID)
+
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class FunctypeContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def primtype(self):
+            return self.getTypedRuleContext(MT22Parser.PrimtypeContext,0)
+
+
+        def arraytype(self):
+            return self.getTypedRuleContext(MT22Parser.ArraytypeContext,0)
+
+
+        def VOID(self):
+            return self.getToken(MT22Parser.VOID, 0)
+
+        def AUTO(self):
+            return self.getToken(MT22Parser.AUTO, 0)
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_functype
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunctype" ):
+                return visitor.visitFunctype(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def functype(self):
+
+        localctx = MT22Parser.FunctypeContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 22, self.RULE_functype)
+        try:
+            self.state = 170
+            self._errHandler.sync(self)
+            token = self._input.LA(1)
+            if token in [MT22Parser.BOOLEAN, MT22Parser.FLOAT, MT22Parser.INTEGER, MT22Parser.STRING]:
+                self.enterOuterAlt(localctx, 1)
+                self.state = 166
+                self.primtype()
+                pass
+            elif token in [MT22Parser.ARRAY]:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 167
+                self.arraytype()
+                pass
+            elif token in [MT22Parser.VOID]:
+                self.enterOuterAlt(localctx, 3)
+                self.state = 168
+                self.match(MT22Parser.VOID)
+                pass
+            elif token in [MT22Parser.AUTO]:
+                self.enterOuterAlt(localctx, 4)
+                self.state = 169
+                self.match(MT22Parser.AUTO)
+                pass
+            else:
+                raise NoViableAltException(self)
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class FuncbodyContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def blockstmt(self):
+            return self.getTypedRuleContext(MT22Parser.BlockstmtContext,0)
+
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_funcbody
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFuncbody" ):
+                return visitor.visitFuncbody(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def funcbody(self):
+
+        localctx = MT22Parser.FuncbodyContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 24, self.RULE_funcbody)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 172
+            self.blockstmt()
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class ParamlistContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def paramdecl(self):
+            return self.getTypedRuleContext(MT22Parser.ParamdeclContext,0)
+
+
+        def paramlist(self):
+            return self.getTypedRuleContext(MT22Parser.ParamlistContext,0)
+
+
+        def COMMA(self):
+            return self.getToken(MT22Parser.COMMA, 0)
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_paramlist
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitParamlist" ):
+                return visitor.visitParamlist(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+    def paramlist(self, _p:int=0):
+        _parentctx = self._ctx
+        _parentState = self.state
+        localctx = MT22Parser.ParamlistContext(self, self._ctx, _parentState)
+        _prevctx = localctx
+        _startState = 26
+        self.enterRecursionRule(localctx, 26, self.RULE_paramlist, _p)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 177
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,8,self._ctx)
+            if la_ == 1:
+                self.state = 175
+                self.paramdecl()
+                pass
+
+            elif la_ == 2:
+                pass
+
+
+            self._ctx.stop = self._input.LT(-1)
+            self.state = 184
+            self._errHandler.sync(self)
+            _alt = self._interp.adaptivePredict(self._input,9,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
+                    if self._parseListeners is not None:
+                        self.triggerExitRuleEvent()
+                    _prevctx = localctx
+                    localctx = MT22Parser.ParamlistContext(self, _parentctx, _parentState)
+                    self.pushNewRecursionContext(localctx, _startState, self.RULE_paramlist)
+                    self.state = 179
+                    if not self.precpred(self._ctx, 3):
+                        from antlr4.error.Errors import FailedPredicateException
+                        raise FailedPredicateException(self, "self.precpred(self._ctx, 3)")
+                    self.state = 180
+                    self.match(MT22Parser.COMMA)
+                    self.state = 181
+                    self.paramdecl() 
+                self.state = 186
+                self._errHandler.sync(self)
+                _alt = self._interp.adaptivePredict(self._input,9,self._ctx)
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.unrollRecursionContexts(_parentctx)
+        return localctx
+
+
+    class ParamdeclContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def ID(self):
+            return self.getToken(MT22Parser.ID, 0)
+
+        def COLON(self):
+            return self.getToken(MT22Parser.COLON, 0)
+
+        def vartype(self):
+            return self.getTypedRuleContext(MT22Parser.VartypeContext,0)
+
+
+        def INHERIT(self):
+            return self.getToken(MT22Parser.INHERIT, 0)
+
+        def OUT(self):
+            return self.getToken(MT22Parser.OUT, 0)
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_paramdecl
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitParamdecl" ):
+                return visitor.visitParamdecl(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def paramdecl(self):
+
+        localctx = MT22Parser.ParamdeclContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 28, self.RULE_paramdecl)
+        self._la = 0 # Token type
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 188
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            if _la==MT22Parser.INHERIT:
+                self.state = 187
+                self.match(MT22Parser.INHERIT)
+
+
+            self.state = 191
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            if _la==MT22Parser.OUT:
+                self.state = 190
+                self.match(MT22Parser.OUT)
+
+
+            self.state = 193
+            self.match(MT22Parser.ID)
+            self.state = 194
+            self.match(MT22Parser.COLON)
+            self.state = 195
+            self.vartype()
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class StmtsContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def stmt_vardecl(self):
+            return self.getTypedRuleContext(MT22Parser.Stmt_vardeclContext,0)
+
+
+        def stmts(self):
+            return self.getTypedRuleContext(MT22Parser.StmtsContext,0)
+
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_stmts
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStmts" ):
+                return visitor.visitStmts(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+    def stmts(self, _p:int=0):
+        _parentctx = self._ctx
+        _parentState = self.state
+        localctx = MT22Parser.StmtsContext(self, self._ctx, _parentState)
+        _prevctx = localctx
+        _startState = 30
+        self.enterRecursionRule(localctx, 30, self.RULE_stmts, _p)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 198
+            self.stmt_vardecl()
+            self._ctx.stop = self._input.LT(-1)
+            self.state = 204
+            self._errHandler.sync(self)
+            _alt = self._interp.adaptivePredict(self._input,12,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
+                    if self._parseListeners is not None:
+                        self.triggerExitRuleEvent()
+                    _prevctx = localctx
+                    localctx = MT22Parser.StmtsContext(self, _parentctx, _parentState)
+                    self.pushNewRecursionContext(localctx, _startState, self.RULE_stmts)
+                    self.state = 200
+                    if not self.precpred(self._ctx, 2):
+                        from antlr4.error.Errors import FailedPredicateException
+                        raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
+                    self.state = 201
+                    self.stmt_vardecl() 
+                self.state = 206
+                self._errHandler.sync(self)
+                _alt = self._interp.adaptivePredict(self._input,12,self._ctx)
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.unrollRecursionContexts(_parentctx)
+        return localctx
+
+
+    class Stmt_vardeclContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def stmt(self):
+            return self.getTypedRuleContext(MT22Parser.StmtContext,0)
+
+
+        def vardecl(self):
+            return self.getTypedRuleContext(MT22Parser.VardeclContext,0)
+
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_stmt_vardecl
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStmt_vardecl" ):
+                return visitor.visitStmt_vardecl(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def stmt_vardecl(self):
+
+        localctx = MT22Parser.Stmt_vardeclContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 32, self.RULE_stmt_vardecl)
+        try:
+            self.state = 209
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,13,self._ctx)
+            if la_ == 1:
+                self.enterOuterAlt(localctx, 1)
+                self.state = 207
+                self.stmt()
+                pass
+
+            elif la_ == 2:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 208
+                self.vardecl()
+                pass
+
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class StmtContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def assignstmt(self):
+            return self.getTypedRuleContext(MT22Parser.AssignstmtContext,0)
+
+
+        def ifstmt(self):
+            return self.getTypedRuleContext(MT22Parser.IfstmtContext,0)
+
+
+        def forstmt(self):
+            return self.getTypedRuleContext(MT22Parser.ForstmtContext,0)
+
+
+        def whilestmt(self):
+            return self.getTypedRuleContext(MT22Parser.WhilestmtContext,0)
+
+
+        def dowhilestmt(self):
+            return self.getTypedRuleContext(MT22Parser.DowhilestmtContext,0)
+
+
+        def breakstmt(self):
+            return self.getTypedRuleContext(MT22Parser.BreakstmtContext,0)
+
+
+        def continuestmt(self):
+            return self.getTypedRuleContext(MT22Parser.ContinuestmtContext,0)
+
+
+        def returnstmt(self):
+            return self.getTypedRuleContext(MT22Parser.ReturnstmtContext,0)
+
+
+        def callstmt(self):
+            return self.getTypedRuleContext(MT22Parser.CallstmtContext,0)
+
+
+        def blockstmt(self):
+            return self.getTypedRuleContext(MT22Parser.BlockstmtContext,0)
+
+
+        def specialfunc_c(self):
+            return self.getTypedRuleContext(MT22Parser.Specialfunc_cContext,0)
+
+
+        def SEMI(self):
+            return self.getToken(MT22Parser.SEMI, 0)
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_stmt
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStmt" ):
+                return visitor.visitStmt(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def stmt(self):
+
+        localctx = MT22Parser.StmtContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 34, self.RULE_stmt)
+        try:
+            self.state = 224
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,14,self._ctx)
+            if la_ == 1:
+                self.enterOuterAlt(localctx, 1)
+                self.state = 211
+                self.assignstmt()
+                pass
+
+            elif la_ == 2:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 212
+                self.ifstmt()
+                pass
+
+            elif la_ == 3:
+                self.enterOuterAlt(localctx, 3)
+                self.state = 213
+                self.forstmt()
+                pass
+
+            elif la_ == 4:
+                self.enterOuterAlt(localctx, 4)
+                self.state = 214
+                self.whilestmt()
+                pass
+
+            elif la_ == 5:
+                self.enterOuterAlt(localctx, 5)
+                self.state = 215
+                self.dowhilestmt()
+                pass
+
+            elif la_ == 6:
+                self.enterOuterAlt(localctx, 6)
+                self.state = 216
+                self.breakstmt()
+                pass
+
+            elif la_ == 7:
+                self.enterOuterAlt(localctx, 7)
+                self.state = 217
+                self.continuestmt()
+                pass
+
+            elif la_ == 8:
+                self.enterOuterAlt(localctx, 8)
+                self.state = 218
+                self.returnstmt()
+                pass
+
+            elif la_ == 9:
+                self.enterOuterAlt(localctx, 9)
+                self.state = 219
+                self.callstmt()
+                pass
+
+            elif la_ == 10:
+                self.enterOuterAlt(localctx, 10)
+                self.state = 220
+                self.blockstmt()
+                pass
+
+            elif la_ == 11:
+                self.enterOuterAlt(localctx, 11)
+                self.state = 221
+                self.specialfunc_c()
+                self.state = 222
+                self.match(MT22Parser.SEMI)
+                pass
+
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class Specialfunc_rContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def ReadInteger(self):
+            return self.getToken(MT22Parser.ReadInteger, 0)
+
+        def ReadFloat(self):
+            return self.getToken(MT22Parser.ReadFloat, 0)
+
+        def ReadBoolean(self):
+            return self.getToken(MT22Parser.ReadBoolean, 0)
+
+        def ReadString(self):
+            return self.getToken(MT22Parser.ReadString, 0)
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_specialfunc_r
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSpecialfunc_r" ):
+                return visitor.visitSpecialfunc_r(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def specialfunc_r(self):
+
+        localctx = MT22Parser.Specialfunc_rContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 36, self.RULE_specialfunc_r)
+        self._la = 0 # Token type
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 226
+            _la = self._input.LA(1)
+            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << MT22Parser.ReadInteger) | (1 << MT22Parser.ReadFloat) | (1 << MT22Parser.ReadBoolean) | (1 << MT22Parser.ReadString))) != 0)):
+                self._errHandler.recoverInline(self)
+            else:
+                self._errHandler.reportMatch(self)
+                self.consume()
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class Specialfunc_cContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def PrintInteger(self):
+            return self.getToken(MT22Parser.PrintInteger, 0)
+
+        def LB(self):
+            return self.getToken(MT22Parser.LB, 0)
+
+        def expr(self):
+            return self.getTypedRuleContext(MT22Parser.ExprContext,0)
+
+
+        def RB(self):
+            return self.getToken(MT22Parser.RB, 0)
+
+        def PrintFloat(self):
+            return self.getToken(MT22Parser.PrintFloat, 0)
+
+        def PrintBoolean(self):
+            return self.getToken(MT22Parser.PrintBoolean, 0)
+
+        def PrintString(self):
+            return self.getToken(MT22Parser.PrintString, 0)
+
+        def Super(self):
+            return self.getToken(MT22Parser.Super, 0)
+
+        def exprlist(self):
+            return self.getTypedRuleContext(MT22Parser.ExprlistContext,0)
+
+
+        def PreventDefault(self):
+            return self.getToken(MT22Parser.PreventDefault, 0)
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_specialfunc_c
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSpecialfunc_c" ):
+                return visitor.visitSpecialfunc_c(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def specialfunc_c(self):
+
+        localctx = MT22Parser.Specialfunc_cContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 38, self.RULE_specialfunc_c)
+        try:
+            self.state = 258
+            self._errHandler.sync(self)
+            token = self._input.LA(1)
+            if token in [MT22Parser.PrintInteger]:
+                self.enterOuterAlt(localctx, 1)
+                self.state = 228
+                self.match(MT22Parser.PrintInteger)
+                self.state = 229
+                self.match(MT22Parser.LB)
+                self.state = 230
+                self.expr()
+                self.state = 231
+                self.match(MT22Parser.RB)
+                pass
+            elif token in [MT22Parser.PrintFloat]:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 233
+                self.match(MT22Parser.PrintFloat)
+                self.state = 234
+                self.match(MT22Parser.LB)
+                self.state = 235
+                self.expr()
+                self.state = 236
+                self.match(MT22Parser.RB)
+                pass
+            elif token in [MT22Parser.PrintBoolean]:
+                self.enterOuterAlt(localctx, 3)
+                self.state = 238
+                self.match(MT22Parser.PrintBoolean)
+                self.state = 239
+                self.match(MT22Parser.LB)
+                self.state = 240
+                self.expr()
+                self.state = 241
+                self.match(MT22Parser.RB)
+                pass
+            elif token in [MT22Parser.PrintString]:
+                self.enterOuterAlt(localctx, 4)
+                self.state = 243
+                self.match(MT22Parser.PrintString)
+                self.state = 244
+                self.match(MT22Parser.LB)
+                self.state = 245
+                self.expr()
+                self.state = 246
+                self.match(MT22Parser.RB)
+                pass
+            elif token in [MT22Parser.Super]:
+                self.enterOuterAlt(localctx, 5)
+                self.state = 248
+                self.match(MT22Parser.Super)
+                self.state = 249
+                self.match(MT22Parser.LB)
+                self.state = 252
+                self._errHandler.sync(self)
+                token = self._input.LA(1)
+                if token in [MT22Parser.RB]:
+                    pass
+                elif token in [MT22Parser.ReadInteger, MT22Parser.ReadFloat, MT22Parser.ReadBoolean, MT22Parser.ReadString, MT22Parser.LB, MT22Parser.LP, MT22Parser.SUB, MT22Parser.NOT, MT22Parser.INTLIT, MT22Parser.FLOATLIT, MT22Parser.BOOLIT, MT22Parser.STRINGLIT, MT22Parser.ID]:
+                    self.state = 251
+                    self.exprlist()
+                    pass
+                else:
+                    raise NoViableAltException(self)
+
+                self.state = 254
+                self.match(MT22Parser.RB)
+                pass
+            elif token in [MT22Parser.PreventDefault]:
+                self.enterOuterAlt(localctx, 6)
+                self.state = 255
+                self.match(MT22Parser.PreventDefault)
+                self.state = 256
+                self.match(MT22Parser.LB)
+                self.state = 257
+                self.match(MT22Parser.RB)
+                pass
+            else:
+                raise NoViableAltException(self)
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class AssignstmtContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def lhs(self):
+            return self.getTypedRuleContext(MT22Parser.LhsContext,0)
+
+
+        def ASSIGN(self):
+            return self.getToken(MT22Parser.ASSIGN, 0)
+
+        def SEMI(self):
+            return self.getToken(MT22Parser.SEMI, 0)
+
+        def expr(self):
+            return self.getTypedRuleContext(MT22Parser.ExprContext,0)
+
+
+        def specialfunc_r(self):
+            return self.getTypedRuleContext(MT22Parser.Specialfunc_rContext,0)
+
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_assignstmt
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAssignstmt" ):
+                return visitor.visitAssignstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def assignstmt(self):
+
+        localctx = MT22Parser.AssignstmtContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 40, self.RULE_assignstmt)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 260
+            self.lhs()
+            self.state = 261
+            self.match(MT22Parser.ASSIGN)
+            self.state = 264
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,17,self._ctx)
+            if la_ == 1:
+                self.state = 262
+                self.expr()
+                pass
+
+            elif la_ == 2:
+                self.state = 263
+                self.specialfunc_r()
+                pass
+
+
+            self.state = 266
+            self.match(MT22Parser.SEMI)
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class LhsContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def ID(self):
+            return self.getToken(MT22Parser.ID, 0)
+
+        def arrayidx(self):
+            return self.getTypedRuleContext(MT22Parser.ArrayidxContext,0)
+
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_lhs
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLhs" ):
+                return visitor.visitLhs(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def lhs(self):
+
+        localctx = MT22Parser.LhsContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 42, self.RULE_lhs)
+        try:
+            self.state = 270
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,18,self._ctx)
+            if la_ == 1:
+                self.enterOuterAlt(localctx, 1)
+                self.state = 268
+                self.match(MT22Parser.ID)
+                pass
+
+            elif la_ == 2:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 269
+                self.arrayidx()
+                pass
+
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class IfstmtContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def IF(self):
+            return self.getToken(MT22Parser.IF, 0)
+
+        def LB(self):
+            return self.getToken(MT22Parser.LB, 0)
+
+        def expr(self):
+            return self.getTypedRuleContext(MT22Parser.ExprContext,0)
+
+
+        def RB(self):
+            return self.getToken(MT22Parser.RB, 0)
+
+        def stmt(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(MT22Parser.StmtContext)
+            else:
+                return self.getTypedRuleContext(MT22Parser.StmtContext,i)
+
+
+        def ELSE(self):
+            return self.getToken(MT22Parser.ELSE, 0)
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_ifstmt
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIfstmt" ):
+                return visitor.visitIfstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def ifstmt(self):
+
+        localctx = MT22Parser.IfstmtContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 44, self.RULE_ifstmt)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 272
+            self.match(MT22Parser.IF)
+            self.state = 273
+            self.match(MT22Parser.LB)
+            self.state = 274
+            self.expr()
+            self.state = 275
+            self.match(MT22Parser.RB)
+            self.state = 276
+            self.stmt()
+            self.state = 279
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,19,self._ctx)
+            if la_ == 1:
+                self.state = 277
+                self.match(MT22Parser.ELSE)
+                self.state = 278
+                self.stmt()
+
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class ForstmtContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def FOR(self):
+            return self.getToken(MT22Parser.FOR, 0)
+
+        def LB(self):
+            return self.getToken(MT22Parser.LB, 0)
+
+        def init_for(self):
+            return self.getTypedRuleContext(MT22Parser.Init_forContext,0)
+
+
+        def COMMA(self, i:int=None):
+            if i is None:
+                return self.getTokens(MT22Parser.COMMA)
+            else:
+                return self.getToken(MT22Parser.COMMA, i)
+
+        def condexpr(self):
+            return self.getTypedRuleContext(MT22Parser.CondexprContext,0)
+
+
+        def updateexpr(self):
+            return self.getTypedRuleContext(MT22Parser.UpdateexprContext,0)
+
+
+        def RB(self):
+            return self.getToken(MT22Parser.RB, 0)
+
+        def stmt(self):
+            return self.getTypedRuleContext(MT22Parser.StmtContext,0)
+
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_forstmt
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitForstmt" ):
+                return visitor.visitForstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def forstmt(self):
+
+        localctx = MT22Parser.ForstmtContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 46, self.RULE_forstmt)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 281
+            self.match(MT22Parser.FOR)
+            self.state = 282
+            self.match(MT22Parser.LB)
+            self.state = 283
+            self.init_for()
+            self.state = 284
+            self.match(MT22Parser.COMMA)
+            self.state = 285
+            self.condexpr()
+            self.state = 286
+            self.match(MT22Parser.COMMA)
+            self.state = 287
+            self.updateexpr()
+            self.state = 288
+            self.match(MT22Parser.RB)
+            self.state = 289
+            self.stmt()
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class Init_forContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def scalarvar(self):
+            return self.getTypedRuleContext(MT22Parser.ScalarvarContext,0)
+
+
+        def ASSIGN(self):
+            return self.getToken(MT22Parser.ASSIGN, 0)
+
+        def intexpr(self):
+            return self.getTypedRuleContext(MT22Parser.IntexprContext,0)
+
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_init_for
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInit_for" ):
+                return visitor.visitInit_for(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def init_for(self):
+
+        localctx = MT22Parser.Init_forContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 48, self.RULE_init_for)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 291
+            self.scalarvar()
+            self.state = 292
+            self.match(MT22Parser.ASSIGN)
+            self.state = 293
+            self.intexpr()
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class ScalarvarContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def ID(self):
+            return self.getToken(MT22Parser.ID, 0)
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_scalarvar
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitScalarvar" ):
+                return visitor.visitScalarvar(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def scalarvar(self):
+
+        localctx = MT22Parser.ScalarvarContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 50, self.RULE_scalarvar)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 295
+            self.match(MT22Parser.ID)
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class IntexprContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def ID(self):
+            return self.getToken(MT22Parser.ID, 0)
+
+        def expr(self):
+            return self.getTypedRuleContext(MT22Parser.ExprContext,0)
+
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_intexpr
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIntexpr" ):
+                return visitor.visitIntexpr(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def intexpr(self):
+
+        localctx = MT22Parser.IntexprContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 52, self.RULE_intexpr)
+        try:
+            self.state = 299
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,20,self._ctx)
+            if la_ == 1:
+                self.enterOuterAlt(localctx, 1)
+                self.state = 297
+                self.match(MT22Parser.ID)
+                pass
+
+            elif la_ == 2:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 298
+                self.expr()
+                pass
+
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class CondexprContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def expr(self):
+            return self.getTypedRuleContext(MT22Parser.ExprContext,0)
+
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_condexpr
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCondexpr" ):
+                return visitor.visitCondexpr(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def condexpr(self):
+
+        localctx = MT22Parser.CondexprContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 54, self.RULE_condexpr)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 301
+            self.expr()
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class UpdateexprContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def expr(self):
+            return self.getTypedRuleContext(MT22Parser.ExprContext,0)
+
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_updateexpr
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitUpdateexpr" ):
+                return visitor.visitUpdateexpr(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def updateexpr(self):
+
+        localctx = MT22Parser.UpdateexprContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 56, self.RULE_updateexpr)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 303
+            self.expr()
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class WhilestmtContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def WHILE(self):
+            return self.getToken(MT22Parser.WHILE, 0)
+
+        def LB(self):
+            return self.getToken(MT22Parser.LB, 0)
+
+        def expr(self):
+            return self.getTypedRuleContext(MT22Parser.ExprContext,0)
+
+
+        def RB(self):
+            return self.getToken(MT22Parser.RB, 0)
+
+        def stmt(self):
+            return self.getTypedRuleContext(MT22Parser.StmtContext,0)
+
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_whilestmt
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWhilestmt" ):
+                return visitor.visitWhilestmt(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def whilestmt(self):
+
+        localctx = MT22Parser.WhilestmtContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 58, self.RULE_whilestmt)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 305
+            self.match(MT22Parser.WHILE)
+            self.state = 306
+            self.match(MT22Parser.LB)
+            self.state = 307
+            self.expr()
+            self.state = 308
+            self.match(MT22Parser.RB)
+            self.state = 309
+            self.stmt()
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class DowhilestmtContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def DO(self):
+            return self.getToken(MT22Parser.DO, 0)
+
+        def blockstmt(self):
+            return self.getTypedRuleContext(MT22Parser.BlockstmtContext,0)
+
+
+        def WHILE(self):
+            return self.getToken(MT22Parser.WHILE, 0)
+
+        def LB(self):
+            return self.getToken(MT22Parser.LB, 0)
+
+        def expr(self):
+            return self.getTypedRuleContext(MT22Parser.ExprContext,0)
+
+
+        def RB(self):
+            return self.getToken(MT22Parser.RB, 0)
+
+        def SEMI(self):
+            return self.getToken(MT22Parser.SEMI, 0)
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_dowhilestmt
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDowhilestmt" ):
+                return visitor.visitDowhilestmt(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def dowhilestmt(self):
+
+        localctx = MT22Parser.DowhilestmtContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 60, self.RULE_dowhilestmt)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 311
+            self.match(MT22Parser.DO)
+            self.state = 312
+            self.blockstmt()
+            self.state = 313
+            self.match(MT22Parser.WHILE)
+            self.state = 314
+            self.match(MT22Parser.LB)
+            self.state = 315
+            self.expr()
+            self.state = 316
+            self.match(MT22Parser.RB)
+            self.state = 317
+            self.match(MT22Parser.SEMI)
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class BreakstmtContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def BREAK(self):
+            return self.getToken(MT22Parser.BREAK, 0)
+
+        def SEMI(self):
+            return self.getToken(MT22Parser.SEMI, 0)
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_breakstmt
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBreakstmt" ):
+                return visitor.visitBreakstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def breakstmt(self):
+
+        localctx = MT22Parser.BreakstmtContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 62, self.RULE_breakstmt)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 319
+            self.match(MT22Parser.BREAK)
+            self.state = 320
+            self.match(MT22Parser.SEMI)
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class ContinuestmtContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def CONTINUE(self):
+            return self.getToken(MT22Parser.CONTINUE, 0)
+
+        def SEMI(self):
+            return self.getToken(MT22Parser.SEMI, 0)
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_continuestmt
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitContinuestmt" ):
+                return visitor.visitContinuestmt(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def continuestmt(self):
+
+        localctx = MT22Parser.ContinuestmtContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 64, self.RULE_continuestmt)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 322
+            self.match(MT22Parser.CONTINUE)
+            self.state = 323
+            self.match(MT22Parser.SEMI)
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class ReturnstmtContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def RETURN(self):
+            return self.getToken(MT22Parser.RETURN, 0)
+
+        def SEMI(self):
+            return self.getToken(MT22Parser.SEMI, 0)
+
+        def expr(self):
+            return self.getTypedRuleContext(MT22Parser.ExprContext,0)
+
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_returnstmt
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitReturnstmt" ):
+                return visitor.visitReturnstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def returnstmt(self):
+
+        localctx = MT22Parser.ReturnstmtContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 66, self.RULE_returnstmt)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 325
+            self.match(MT22Parser.RETURN)
+            self.state = 328
+            self._errHandler.sync(self)
+            token = self._input.LA(1)
+            if token in [MT22Parser.ReadInteger, MT22Parser.ReadFloat, MT22Parser.ReadBoolean, MT22Parser.ReadString, MT22Parser.LB, MT22Parser.LP, MT22Parser.SUB, MT22Parser.NOT, MT22Parser.INTLIT, MT22Parser.FLOATLIT, MT22Parser.BOOLIT, MT22Parser.STRINGLIT, MT22Parser.ID]:
+                self.state = 326
+                self.expr()
+                pass
+            elif token in [MT22Parser.SEMI]:
+                pass
+            else:
+                raise NoViableAltException(self)
+
+            self.state = 330
+            self.match(MT22Parser.SEMI)
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class CallstmtContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def ID(self):
+            return self.getToken(MT22Parser.ID, 0)
+
+        def LB(self):
+            return self.getToken(MT22Parser.LB, 0)
+
+        def RB(self):
+            return self.getToken(MT22Parser.RB, 0)
+
+        def SEMI(self):
+            return self.getToken(MT22Parser.SEMI, 0)
+
+        def exprlist(self):
+            return self.getTypedRuleContext(MT22Parser.ExprlistContext,0)
+
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_callstmt
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCallstmt" ):
+                return visitor.visitCallstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def callstmt(self):
+
+        localctx = MT22Parser.CallstmtContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 68, self.RULE_callstmt)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 332
+            self.match(MT22Parser.ID)
+            self.state = 333
+            self.match(MT22Parser.LB)
+            self.state = 336
+            self._errHandler.sync(self)
+            token = self._input.LA(1)
+            if token in [MT22Parser.ReadInteger, MT22Parser.ReadFloat, MT22Parser.ReadBoolean, MT22Parser.ReadString, MT22Parser.LB, MT22Parser.LP, MT22Parser.SUB, MT22Parser.NOT, MT22Parser.INTLIT, MT22Parser.FLOATLIT, MT22Parser.BOOLIT, MT22Parser.STRINGLIT, MT22Parser.ID]:
+                self.state = 334
+                self.exprlist()
+                pass
+            elif token in [MT22Parser.RB]:
+                pass
+            else:
+                raise NoViableAltException(self)
+
+            self.state = 338
+            self.match(MT22Parser.RB)
+            self.state = 339
+            self.match(MT22Parser.SEMI)
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class BlockstmtContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def LP(self):
+            return self.getToken(MT22Parser.LP, 0)
+
+        def RP(self):
+            return self.getToken(MT22Parser.RP, 0)
+
+        def stmts(self):
+            return self.getTypedRuleContext(MT22Parser.StmtsContext,0)
+
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_blockstmt
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBlockstmt" ):
+                return visitor.visitBlockstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def blockstmt(self):
+
+        localctx = MT22Parser.BlockstmtContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 70, self.RULE_blockstmt)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 341
+            self.match(MT22Parser.LP)
+            self.state = 344
+            self._errHandler.sync(self)
+            token = self._input.LA(1)
+            if token in [MT22Parser.PrintInteger, MT22Parser.PrintFloat, MT22Parser.PrintBoolean, MT22Parser.PrintString, MT22Parser.Super, MT22Parser.PreventDefault, MT22Parser.LP, MT22Parser.BREAK, MT22Parser.DO, MT22Parser.FOR, MT22Parser.IF, MT22Parser.RETURN, MT22Parser.WHILE, MT22Parser.CONTINUE, MT22Parser.ID]:
+                self.state = 342
+                self.stmts(0)
+                pass
+            elif token in [MT22Parser.RP]:
+                pass
+            else:
+                raise NoViableAltException(self)
+
+            self.state = 346
+            self.match(MT22Parser.RP)
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class ArraytypeContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def ARRAY(self):
+            return self.getToken(MT22Parser.ARRAY, 0)
+
+        def LSB(self):
+            return self.getToken(MT22Parser.LSB, 0)
+
+        def intlist(self):
+            return self.getTypedRuleContext(MT22Parser.IntlistContext,0)
+
+
+        def RSB(self):
+            return self.getToken(MT22Parser.RSB, 0)
+
+        def OF(self):
+            return self.getToken(MT22Parser.OF, 0)
+
+        def primtype(self):
+            return self.getTypedRuleContext(MT22Parser.PrimtypeContext,0)
+
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_arraytype
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitArraytype" ):
+                return visitor.visitArraytype(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def arraytype(self):
+
+        localctx = MT22Parser.ArraytypeContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 72, self.RULE_arraytype)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 348
+            self.match(MT22Parser.ARRAY)
+            self.state = 349
+            self.match(MT22Parser.LSB)
+            self.state = 350
+            self.intlist()
+            self.state = 351
+            self.match(MT22Parser.RSB)
+            self.state = 352
+            self.match(MT22Parser.OF)
+            self.state = 353
+            self.primtype()
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class ArraylitContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def LP(self):
+            return self.getToken(MT22Parser.LP, 0)
+
+        def RP(self):
+            return self.getToken(MT22Parser.RP, 0)
+
+        def exprlist(self):
+            return self.getTypedRuleContext(MT22Parser.ExprlistContext,0)
+
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_arraylit
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitArraylit" ):
+                return visitor.visitArraylit(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def arraylit(self):
+
+        localctx = MT22Parser.ArraylitContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 74, self.RULE_arraylit)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 355
+            self.match(MT22Parser.LP)
+            self.state = 358
+            self._errHandler.sync(self)
+            token = self._input.LA(1)
+            if token in [MT22Parser.ReadInteger, MT22Parser.ReadFloat, MT22Parser.ReadBoolean, MT22Parser.ReadString, MT22Parser.LB, MT22Parser.LP, MT22Parser.SUB, MT22Parser.NOT, MT22Parser.INTLIT, MT22Parser.FLOATLIT, MT22Parser.BOOLIT, MT22Parser.STRINGLIT, MT22Parser.ID]:
+                self.state = 356
+                self.exprlist()
+                pass
+            elif token in [MT22Parser.RP]:
+                pass
+            else:
+                raise NoViableAltException(self)
+
+            self.state = 360
+            self.match(MT22Parser.RP)
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class ArrayidxContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def ID(self):
+            return self.getToken(MT22Parser.ID, 0)
+
+        def LSB(self):
+            return self.getToken(MT22Parser.LSB, 0)
+
+        def exprlist(self):
+            return self.getTypedRuleContext(MT22Parser.ExprlistContext,0)
+
+
+        def RSB(self):
+            return self.getToken(MT22Parser.RSB, 0)
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_arrayidx
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitArrayidx" ):
+                return visitor.visitArrayidx(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def arrayidx(self):
+
+        localctx = MT22Parser.ArrayidxContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 76, self.RULE_arrayidx)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 362
+            self.match(MT22Parser.ID)
+            self.state = 363
+            self.match(MT22Parser.LSB)
+            self.state = 364
+            self.exprlist()
+            self.state = 365
+            self.match(MT22Parser.RSB)
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class IntlistContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def INTLIT(self):
+            return self.getToken(MT22Parser.INTLIT, 0)
+
+        def COMMA(self):
+            return self.getToken(MT22Parser.COMMA, 0)
+
+        def intlist(self):
+            return self.getTypedRuleContext(MT22Parser.IntlistContext,0)
+
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_intlist
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIntlist" ):
+                return visitor.visitIntlist(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def intlist(self):
+
+        localctx = MT22Parser.IntlistContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 78, self.RULE_intlist)
+        try:
+            self.state = 371
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,25,self._ctx)
+            if la_ == 1:
+                self.enterOuterAlt(localctx, 1)
+                self.state = 367
+                self.match(MT22Parser.INTLIT)
+                self.state = 368
+                self.match(MT22Parser.COMMA)
+                self.state = 369
+                self.intlist()
+                pass
+
+            elif la_ == 2:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 370
+                self.match(MT22Parser.INTLIT)
+                pass
+
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class ExprlistContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def expr(self):
+            return self.getTypedRuleContext(MT22Parser.ExprContext,0)
+
+
+        def COMMA(self):
+            return self.getToken(MT22Parser.COMMA, 0)
+
+        def exprlist(self):
+            return self.getTypedRuleContext(MT22Parser.ExprlistContext,0)
+
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_exprlist
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExprlist" ):
+                return visitor.visitExprlist(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def exprlist(self):
+
+        localctx = MT22Parser.ExprlistContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 80, self.RULE_exprlist)
+        try:
+            self.state = 378
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,26,self._ctx)
+            if la_ == 1:
+                self.enterOuterAlt(localctx, 1)
+                self.state = 373
+                self.expr()
+                self.state = 374
+                self.match(MT22Parser.COMMA)
+                self.state = 375
+                self.exprlist()
+                pass
+
+            elif la_ == 2:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 377
+                self.expr()
+                pass
+
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class ExprContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def exp1(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(MT22Parser.Exp1Context)
+            else:
+                return self.getTypedRuleContext(MT22Parser.Exp1Context,i)
+
+
+        def CONCATE(self):
+            return self.getToken(MT22Parser.CONCATE, 0)
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_expr
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExpr" ):
+                return visitor.visitExpr(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def expr(self):
+
+        localctx = MT22Parser.ExprContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 82, self.RULE_expr)
+        try:
+            self.state = 385
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,27,self._ctx)
+            if la_ == 1:
+                self.enterOuterAlt(localctx, 1)
+                self.state = 380
+                self.exp1()
+                self.state = 381
+                self.match(MT22Parser.CONCATE)
+                self.state = 382
+                self.exp1()
+                pass
+
+            elif la_ == 2:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 384
+                self.exp1()
+                pass
+
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class Exp1Context(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def exp2(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(MT22Parser.Exp2Context)
+            else:
+                return self.getTypedRuleContext(MT22Parser.Exp2Context,i)
+
+
+        def EQ(self):
+            return self.getToken(MT22Parser.EQ, 0)
+
+        def NEQ(self):
+            return self.getToken(MT22Parser.NEQ, 0)
+
+        def LT(self):
+            return self.getToken(MT22Parser.LT, 0)
+
+        def GT(self):
+            return self.getToken(MT22Parser.GT, 0)
+
+        def GEQ(self):
+            return self.getToken(MT22Parser.GEQ, 0)
+
+        def LEQ(self):
+            return self.getToken(MT22Parser.LEQ, 0)
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_exp1
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExp1" ):
+                return visitor.visitExp1(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def exp1(self):
+
+        localctx = MT22Parser.Exp1Context(self, self._ctx, self.state)
+        self.enterRule(localctx, 84, self.RULE_exp1)
+        self._la = 0 # Token type
+        try:
+            self.state = 392
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,28,self._ctx)
+            if la_ == 1:
+                self.enterOuterAlt(localctx, 1)
+                self.state = 387
+                self.exp2(0)
+                self.state = 388
+                _la = self._input.LA(1)
+                if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << MT22Parser.EQ) | (1 << MT22Parser.NEQ) | (1 << MT22Parser.LT) | (1 << MT22Parser.GT) | (1 << MT22Parser.LEQ) | (1 << MT22Parser.GEQ))) != 0)):
+                    self._errHandler.recoverInline(self)
+                else:
+                    self._errHandler.reportMatch(self)
+                    self.consume()
+                self.state = 389
+                self.exp2(0)
+                pass
+
+            elif la_ == 2:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 391
+                self.exp2(0)
+                pass
+
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class Exp2Context(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def exp3(self):
+            return self.getTypedRuleContext(MT22Parser.Exp3Context,0)
+
+
+        def exp2(self):
+            return self.getTypedRuleContext(MT22Parser.Exp2Context,0)
+
+
+        def AND(self):
+            return self.getToken(MT22Parser.AND, 0)
+
+        def OR(self):
+            return self.getToken(MT22Parser.OR, 0)
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_exp2
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExp2" ):
+                return visitor.visitExp2(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+    def exp2(self, _p:int=0):
+        _parentctx = self._ctx
+        _parentState = self.state
+        localctx = MT22Parser.Exp2Context(self, self._ctx, _parentState)
+        _prevctx = localctx
+        _startState = 86
+        self.enterRecursionRule(localctx, 86, self.RULE_exp2, _p)
+        self._la = 0 # Token type
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 395
+            self.exp3(0)
+            self._ctx.stop = self._input.LT(-1)
+            self.state = 402
+            self._errHandler.sync(self)
+            _alt = self._interp.adaptivePredict(self._input,29,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
+                    if self._parseListeners is not None:
+                        self.triggerExitRuleEvent()
+                    _prevctx = localctx
+                    localctx = MT22Parser.Exp2Context(self, _parentctx, _parentState)
+                    self.pushNewRecursionContext(localctx, _startState, self.RULE_exp2)
+                    self.state = 397
+                    if not self.precpred(self._ctx, 2):
+                        from antlr4.error.Errors import FailedPredicateException
+                        raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
+                    self.state = 398
+                    _la = self._input.LA(1)
+                    if not(_la==MT22Parser.AND or _la==MT22Parser.OR):
+                        self._errHandler.recoverInline(self)
+                    else:
+                        self._errHandler.reportMatch(self)
+                        self.consume()
+                    self.state = 399
+                    self.exp3(0) 
+                self.state = 404
+                self._errHandler.sync(self)
+                _alt = self._interp.adaptivePredict(self._input,29,self._ctx)
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.unrollRecursionContexts(_parentctx)
+        return localctx
+
+
+    class Exp3Context(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def exp4(self):
+            return self.getTypedRuleContext(MT22Parser.Exp4Context,0)
+
+
+        def exp3(self):
+            return self.getTypedRuleContext(MT22Parser.Exp3Context,0)
+
+
+        def ADD(self):
+            return self.getToken(MT22Parser.ADD, 0)
+
+        def SUB(self):
+            return self.getToken(MT22Parser.SUB, 0)
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_exp3
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExp3" ):
+                return visitor.visitExp3(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+    def exp3(self, _p:int=0):
+        _parentctx = self._ctx
+        _parentState = self.state
+        localctx = MT22Parser.Exp3Context(self, self._ctx, _parentState)
+        _prevctx = localctx
+        _startState = 88
+        self.enterRecursionRule(localctx, 88, self.RULE_exp3, _p)
+        self._la = 0 # Token type
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 406
+            self.exp4(0)
+            self._ctx.stop = self._input.LT(-1)
+            self.state = 413
+            self._errHandler.sync(self)
+            _alt = self._interp.adaptivePredict(self._input,30,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
+                    if self._parseListeners is not None:
+                        self.triggerExitRuleEvent()
+                    _prevctx = localctx
+                    localctx = MT22Parser.Exp3Context(self, _parentctx, _parentState)
+                    self.pushNewRecursionContext(localctx, _startState, self.RULE_exp3)
+                    self.state = 408
+                    if not self.precpred(self._ctx, 2):
+                        from antlr4.error.Errors import FailedPredicateException
+                        raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
+                    self.state = 409
+                    _la = self._input.LA(1)
+                    if not(_la==MT22Parser.SUB or _la==MT22Parser.ADD):
+                        self._errHandler.recoverInline(self)
+                    else:
+                        self._errHandler.reportMatch(self)
+                        self.consume()
+                    self.state = 410
+                    self.exp4(0) 
+                self.state = 415
+                self._errHandler.sync(self)
+                _alt = self._interp.adaptivePredict(self._input,30,self._ctx)
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.unrollRecursionContexts(_parentctx)
+        return localctx
+
+
+    class Exp4Context(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def exp5(self):
+            return self.getTypedRuleContext(MT22Parser.Exp5Context,0)
+
+
+        def exp4(self):
+            return self.getTypedRuleContext(MT22Parser.Exp4Context,0)
+
+
+        def MUL(self):
+            return self.getToken(MT22Parser.MUL, 0)
+
+        def DIV(self):
+            return self.getToken(MT22Parser.DIV, 0)
+
+        def MOD(self):
+            return self.getToken(MT22Parser.MOD, 0)
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_exp4
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExp4" ):
+                return visitor.visitExp4(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+    def exp4(self, _p:int=0):
+        _parentctx = self._ctx
+        _parentState = self.state
+        localctx = MT22Parser.Exp4Context(self, self._ctx, _parentState)
+        _prevctx = localctx
+        _startState = 90
+        self.enterRecursionRule(localctx, 90, self.RULE_exp4, _p)
+        self._la = 0 # Token type
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 417
+            self.exp5()
+            self._ctx.stop = self._input.LT(-1)
+            self.state = 424
+            self._errHandler.sync(self)
+            _alt = self._interp.adaptivePredict(self._input,31,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
+                    if self._parseListeners is not None:
+                        self.triggerExitRuleEvent()
+                    _prevctx = localctx
+                    localctx = MT22Parser.Exp4Context(self, _parentctx, _parentState)
+                    self.pushNewRecursionContext(localctx, _startState, self.RULE_exp4)
+                    self.state = 419
+                    if not self.precpred(self._ctx, 2):
+                        from antlr4.error.Errors import FailedPredicateException
+                        raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
+                    self.state = 420
+                    _la = self._input.LA(1)
+                    if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << MT22Parser.MUL) | (1 << MT22Parser.DIV) | (1 << MT22Parser.MOD))) != 0)):
+                        self._errHandler.recoverInline(self)
+                    else:
+                        self._errHandler.reportMatch(self)
+                        self.consume()
+                    self.state = 421
+                    self.exp5() 
+                self.state = 426
+                self._errHandler.sync(self)
+                _alt = self._interp.adaptivePredict(self._input,31,self._ctx)
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.unrollRecursionContexts(_parentctx)
+        return localctx
+
+
+    class Exp5Context(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def NOT(self):
+            return self.getToken(MT22Parser.NOT, 0)
+
+        def exp5(self):
+            return self.getTypedRuleContext(MT22Parser.Exp5Context,0)
+
+
+        def exp6(self):
+            return self.getTypedRuleContext(MT22Parser.Exp6Context,0)
+
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_exp5
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExp5" ):
+                return visitor.visitExp5(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def exp5(self):
+
+        localctx = MT22Parser.Exp5Context(self, self._ctx, self.state)
+        self.enterRule(localctx, 92, self.RULE_exp5)
+        try:
+            self.state = 430
+            self._errHandler.sync(self)
+            token = self._input.LA(1)
+            if token in [MT22Parser.NOT]:
+                self.enterOuterAlt(localctx, 1)
+                self.state = 427
+                self.match(MT22Parser.NOT)
+                self.state = 428
+                self.exp5()
+                pass
+            elif token in [MT22Parser.ReadInteger, MT22Parser.ReadFloat, MT22Parser.ReadBoolean, MT22Parser.ReadString, MT22Parser.LB, MT22Parser.LP, MT22Parser.SUB, MT22Parser.INTLIT, MT22Parser.FLOATLIT, MT22Parser.BOOLIT, MT22Parser.STRINGLIT, MT22Parser.ID]:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 429
+                self.exp6()
+                pass
+            else:
+                raise NoViableAltException(self)
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class Exp6Context(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def SUB(self):
+            return self.getToken(MT22Parser.SUB, 0)
+
+        def exp6(self):
+            return self.getTypedRuleContext(MT22Parser.Exp6Context,0)
+
+
+        def exp(self):
+            return self.getTypedRuleContext(MT22Parser.ExpContext,0)
+
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_exp6
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExp6" ):
+                return visitor.visitExp6(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def exp6(self):
+
+        localctx = MT22Parser.Exp6Context(self, self._ctx, self.state)
+        self.enterRule(localctx, 94, self.RULE_exp6)
+        try:
+            self.state = 435
+            self._errHandler.sync(self)
+            token = self._input.LA(1)
+            if token in [MT22Parser.SUB]:
+                self.enterOuterAlt(localctx, 1)
+                self.state = 432
+                self.match(MT22Parser.SUB)
+                self.state = 433
+                self.exp6()
+                pass
+            elif token in [MT22Parser.ReadInteger, MT22Parser.ReadFloat, MT22Parser.ReadBoolean, MT22Parser.ReadString, MT22Parser.LB, MT22Parser.LP, MT22Parser.INTLIT, MT22Parser.FLOATLIT, MT22Parser.BOOLIT, MT22Parser.STRINGLIT, MT22Parser.ID]:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 434
+                self.exp()
+                pass
+            else:
+                raise NoViableAltException(self)
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class ExpContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def LB(self):
+            return self.getToken(MT22Parser.LB, 0)
+
+        def expr(self):
+            return self.getTypedRuleContext(MT22Parser.ExprContext,0)
+
+
+        def RB(self):
+            return self.getToken(MT22Parser.RB, 0)
+
+        def ID(self):
+            return self.getToken(MT22Parser.ID, 0)
+
+        def INTLIT(self):
+            return self.getToken(MT22Parser.INTLIT, 0)
+
+        def FLOATLIT(self):
+            return self.getToken(MT22Parser.FLOATLIT, 0)
+
+        def STRINGLIT(self):
+            return self.getToken(MT22Parser.STRINGLIT, 0)
+
+        def BOOLIT(self):
+            return self.getToken(MT22Parser.BOOLIT, 0)
+
+        def arraylit(self):
+            return self.getTypedRuleContext(MT22Parser.ArraylitContext,0)
+
+
+        def arrayidx(self):
+            return self.getTypedRuleContext(MT22Parser.ArrayidxContext,0)
+
+
+        def funccall(self):
+            return self.getTypedRuleContext(MT22Parser.FunccallContext,0)
+
+
+        def specialfunc_r(self):
+            return self.getTypedRuleContext(MT22Parser.Specialfunc_rContext,0)
+
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_exp
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExp" ):
+                return visitor.visitExp(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def exp(self):
+
+        localctx = MT22Parser.ExpContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 96, self.RULE_exp)
+        try:
+            self.state = 450
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,34,self._ctx)
+            if la_ == 1:
+                self.enterOuterAlt(localctx, 1)
+                self.state = 437
+                self.match(MT22Parser.LB)
+                self.state = 438
+                self.expr()
+                self.state = 439
+                self.match(MT22Parser.RB)
+                pass
+
+            elif la_ == 2:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 441
+                self.match(MT22Parser.ID)
+                pass
+
+            elif la_ == 3:
+                self.enterOuterAlt(localctx, 3)
+                self.state = 442
+                self.match(MT22Parser.INTLIT)
+                pass
+
+            elif la_ == 4:
+                self.enterOuterAlt(localctx, 4)
+                self.state = 443
+                self.match(MT22Parser.FLOATLIT)
+                pass
+
+            elif la_ == 5:
+                self.enterOuterAlt(localctx, 5)
+                self.state = 444
+                self.match(MT22Parser.STRINGLIT)
+                pass
+
+            elif la_ == 6:
+                self.enterOuterAlt(localctx, 6)
+                self.state = 445
+                self.match(MT22Parser.BOOLIT)
+                pass
+
+            elif la_ == 7:
+                self.enterOuterAlt(localctx, 7)
+                self.state = 446
+                self.arraylit()
+                pass
+
+            elif la_ == 8:
+                self.enterOuterAlt(localctx, 8)
+                self.state = 447
+                self.arrayidx()
+                pass
+
+            elif la_ == 9:
+                self.enterOuterAlt(localctx, 9)
+                self.state = 448
+                self.funccall()
+                pass
+
+            elif la_ == 10:
+                self.enterOuterAlt(localctx, 10)
+                self.state = 449
+                self.specialfunc_r()
+                pass
+
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class FunccallContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def ID(self):
+            return self.getToken(MT22Parser.ID, 0)
+
+        def LB(self):
+            return self.getToken(MT22Parser.LB, 0)
+
+        def RB(self):
+            return self.getToken(MT22Parser.RB, 0)
+
+        def exprlist(self):
+            return self.getTypedRuleContext(MT22Parser.ExprlistContext,0)
+
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_funccall
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunccall" ):
+                return visitor.visitFunccall(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def funccall(self):
+
+        localctx = MT22Parser.FunccallContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 98, self.RULE_funccall)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 452
+            self.match(MT22Parser.ID)
+            self.state = 453
+            self.match(MT22Parser.LB)
+            self.state = 456
+            self._errHandler.sync(self)
+            token = self._input.LA(1)
+            if token in [MT22Parser.ReadInteger, MT22Parser.ReadFloat, MT22Parser.ReadBoolean, MT22Parser.ReadString, MT22Parser.LB, MT22Parser.LP, MT22Parser.SUB, MT22Parser.NOT, MT22Parser.INTLIT, MT22Parser.FLOATLIT, MT22Parser.BOOLIT, MT22Parser.STRINGLIT, MT22Parser.ID]:
+                self.state = 454
+                self.exprlist()
+                pass
+            elif token in [MT22Parser.RB]:
+                pass
+            else:
+                raise NoViableAltException(self)
+
+            self.state = 458
+            self.match(MT22Parser.RB)
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class PrimtypeContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def INTEGER(self):
+            return self.getToken(MT22Parser.INTEGER, 0)
+
+        def FLOAT(self):
+            return self.getToken(MT22Parser.FLOAT, 0)
+
+        def STRING(self):
+            return self.getToken(MT22Parser.STRING, 0)
+
+        def BOOLEAN(self):
+            return self.getToken(MT22Parser.BOOLEAN, 0)
+
+        def getRuleIndex(self):
+            return MT22Parser.RULE_primtype
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPrimtype" ):
+                return visitor.visitPrimtype(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def primtype(self):
+
+        localctx = MT22Parser.PrimtypeContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 100, self.RULE_primtype)
+        self._la = 0 # Token type
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 460
+            _la = self._input.LA(1)
+            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << MT22Parser.BOOLEAN) | (1 << MT22Parser.FLOAT) | (1 << MT22Parser.INTEGER) | (1 << MT22Parser.STRING))) != 0)):
+                self._errHandler.recoverInline(self)
+            else:
+                self._errHandler.reportMatch(self)
+                self.consume()
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+
+    def sempred(self, localctx:RuleContext, ruleIndex:int, predIndex:int):
+        if self._predicates == None:
+            self._predicates = dict()
+        self._predicates[13] = self.paramlist_sempred
+        self._predicates[15] = self.stmts_sempred
+        self._predicates[43] = self.exp2_sempred
+        self._predicates[44] = self.exp3_sempred
+        self._predicates[45] = self.exp4_sempred
+        pred = self._predicates.get(ruleIndex, None)
+        if pred is None:
+            raise Exception("No predicate with index:" + str(ruleIndex))
+        else:
+            return pred(localctx, predIndex)
+
+    def paramlist_sempred(self, localctx:ParamlistContext, predIndex:int):
+            if predIndex == 0:
+                return self.precpred(self._ctx, 3)
+         
+
+    def stmts_sempred(self, localctx:StmtsContext, predIndex:int):
+            if predIndex == 1:
+                return self.precpred(self._ctx, 2)
+         
+
+    def exp2_sempred(self, localctx:Exp2Context, predIndex:int):
+            if predIndex == 2:
+                return self.precpred(self._ctx, 2)
+         
+
+    def exp3_sempred(self, localctx:Exp3Context, predIndex:int):
+            if predIndex == 3:
+                return self.precpred(self._ctx, 2)
+         
+
+    def exp4_sempred(self, localctx:Exp4Context, predIndex:int):
+            if predIndex == 4:
+                return self.precpred(self._ctx, 2)
+         
+
+
+
+

@@ -1,0 +1,9 @@
+
+        main: function void () {  
+                do {
+                    while(b) do {
+                            printString("My name is Hoa");
+                    }   while (c);
+                }
+                while(a);
+        }

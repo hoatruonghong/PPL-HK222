@@ -1,0 +1,25 @@
+
+		a: integer = 5;
+		foo: function integer (x: integer) {
+			b: auto = 5;
+			{
+				c: integer = 5;
+				{
+					d: integer = 5;
+				}
+				c = 6;
+				{
+					e: integer = 9;
+				}
+			}
+			
+			return 1;
+		}
+		bar : function integer () {
+			a = 5;
+			{
+				return a;
+			}
+		}
+		
+		

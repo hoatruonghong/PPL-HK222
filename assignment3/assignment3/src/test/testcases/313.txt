@@ -1,0 +1,4 @@
+toString : function string () {
+        }
+        toInteger : function integer () {
+        }

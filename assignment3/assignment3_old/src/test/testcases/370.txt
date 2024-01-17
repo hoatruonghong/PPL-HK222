@@ -1,0 +1,13 @@
+
+        main: function void () {  
+            i: integer = 0;
+            for(i= i,i<=arr[1_0, i],arr[i]-2)
+                {
+                    if(true)
+                        continue;
+                    else
+                        break;
+                    continue;
+                }
+            __remove__(____variable____);
+        }

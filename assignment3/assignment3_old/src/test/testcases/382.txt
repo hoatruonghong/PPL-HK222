@@ -1,0 +1,11 @@
+
+        main : function void() {
+            {
+                {
+                    
+                }
+                if (a == 0) printBoolean(b);
+            }
+            return ;
+        }
+        

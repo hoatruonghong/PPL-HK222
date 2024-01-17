@@ -1,0 +1,6 @@
+x , y : boolean = true , false ;
+                    a, b : string;
+                    a1, a2 : auto = b1, b2 ;
+                    length, width, area : float = 1., 2., 1.02;
+                    array_B : array[2] of boolean = {true, false};    
+                

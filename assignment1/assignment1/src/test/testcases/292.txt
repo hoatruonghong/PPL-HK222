@@ -1,0 +1,19 @@
+
+            i : integer ;
+            f : function integer() {
+                return 2000;
+            }
+            main: function void() {
+                main : integer ;
+                main = f();
+                printInteger(main);
+                {
+                    i = readInteger();
+                    main : integer;
+                    f : integer;
+                    main = f = i = 1000;
+                    printAll(i, main, f) ;
+                }
+                return ;
+            }
+        

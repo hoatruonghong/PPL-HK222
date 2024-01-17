@@ -1,0 +1,5 @@
+               
+                main : function void(){
+                    arrB[0,0,arrB[0,0,arrB[i,i,0]]] = arrayA[10-1,8+1];
+                }
+        

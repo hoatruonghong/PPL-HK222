@@ -1,0 +1,7 @@
+
+        average : float = 0.0;
+        beginString : string = "";
+        main: function void () {
+                beginString = "hello world";
+                average = sum/number;
+        }

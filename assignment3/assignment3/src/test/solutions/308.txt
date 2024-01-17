@@ -1,0 +1,12 @@
+Program([
+	VarDecl(x, BooleanType, BooleanLit(True))
+	VarDecl(y, BooleanType, BooleanLit(False))
+	VarDecl(a, StringType)
+	VarDecl(b, StringType)
+	VarDecl(a1, AutoType, Id(b1))
+	VarDecl(a2, AutoType, Id(b2))
+	VarDecl(length, FloatType, FloatLit(1.0))
+	VarDecl(width, FloatType, FloatLit(2.0))
+	VarDecl(area, FloatType, FloatLit(1.02))
+	VarDecl(array_B, ArrayType([2], BooleanType), ArrayLit([BooleanLit(True), BooleanLit(False)]))
+])

@@ -1,0 +1,21 @@
+
+        main: function void () {  
+            if(1) {
+                do {
+                    arr[i]=i*i;
+                } while(i < 0);
+                continue;
+            }
+            else {
+                if(false) break;
+                else
+                    do {
+                        print("Hello");
+                        if(i==false) {
+                            str = str :: "#";
+                            continue;
+                        }
+                    } while(i==true);
+                break;
+            }
+        }

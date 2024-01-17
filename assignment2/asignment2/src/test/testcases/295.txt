@@ -1,0 +1,19 @@
+
+            count_occurrences : function integer(out a : array[10] of integer, out x : integer,lo: integer,hi:integer) {
+                if( lo > hi) return 0;
+                mid: integer = floor((lo+hi)/2);
+                if (a[mid] < x) 
+                    return count_occurrences(a,x,mid+1,hi);
+                else if (a[mid]>x)
+                    return count_occurrences(a,x,lo,mid-1);
+                else {
+                    return 1 + count_occurrences(a,x,lo,mid-1) + count_occurrences(a,x,mid+1,hi);
+                    
+                } 
+            }
+            /* in the main function, we call it */
+            main: function void() {                
+                print(count_occurrences(arr,5,0,len(a)-1));
+                return;
+            }
+        

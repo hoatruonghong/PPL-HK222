@@ -1,0 +1,8 @@
+
+        main: function void () {
+                a = readInteger();
+                b = readFloat();
+                c = readBoolean();
+                d = readString();
+        }
+        

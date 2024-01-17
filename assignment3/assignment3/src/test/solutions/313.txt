@@ -1,0 +1,4 @@
+Program([
+	FuncDecl(toString, StringType, [], None, BlockStmt([]))
+	FuncDecl(toInteger, IntegerType, [], None, BlockStmt([]))
+])

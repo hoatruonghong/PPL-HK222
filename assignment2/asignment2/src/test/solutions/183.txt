@@ -1,0 +1,1 @@
+income,=,income,+,salary,*,1.2,*,rate,[,1,],+,month,Error Token #

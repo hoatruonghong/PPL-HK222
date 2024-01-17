@@ -1,0 +1,5 @@
+
+        main: function void(){}
+        height, weight : integer;
+        readInteger : integer;
+        

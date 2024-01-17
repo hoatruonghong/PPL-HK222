@@ -1,0 +1,4 @@
+main: function void () {
+                r : float = 3.0e4;
+                r = 3.01e4 ;
+            } 

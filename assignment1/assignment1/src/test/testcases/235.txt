@@ -1,0 +1,7 @@
+
+            main: function void () {
+                a1, a2 : string = "Hello ", "World!" ;
+                a = a1 :: a2 ;            
+                a = (a :: ( a :: "a" ) ) :: a;
+                return a;
+            } 

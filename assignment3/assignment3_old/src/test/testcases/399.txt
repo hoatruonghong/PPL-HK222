@@ -1,0 +1,15 @@
+
+            main : function void() {
+                x, y : integer = 50, 2;
+                for(i = 0, i < x , i + y){
+                    if (i != 3){
+                        if (arr[i]) {
+                            print("Hello world");
+                            y = y + 1;
+                        }
+                    }
+                    else break;
+                }
+                print(a[a[a[y]]]);
+            }
+        

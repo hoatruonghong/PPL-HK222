@@ -1,0 +1,6 @@
+a, b, c, a1: integer = 0, 0,0,0;
+            main: function void () {
+                a1 : integer = a + 1 ;
+                b = a + a1;
+                c = b-a-10;
+            } 

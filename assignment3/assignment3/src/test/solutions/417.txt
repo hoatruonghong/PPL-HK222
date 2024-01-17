@@ -1,0 +1,1 @@
+Type mismatch in statement: CallStmt(a, IntegerLit(4), ArrayCell(arr, [IntegerLit(0)]))

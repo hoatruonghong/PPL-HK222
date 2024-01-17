@@ -1,0 +1,4 @@
+
+            arr : array [2,3] of integer;
+            arr_b : array[5] of boolean = {true, true, false, false, true};
+        

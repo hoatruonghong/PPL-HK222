@@ -1,0 +1,12 @@
+
+        main: function void () {
+                if (a>b) {
+                        temp : integer = a;
+                        a = b;
+                        b = temp ;
+                }                   
+                else {
+                        x,y : integer = b,a;
+                        return ;
+                }           
+        }

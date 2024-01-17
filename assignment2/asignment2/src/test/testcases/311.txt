@@ -1,0 +1,2 @@
+main: function string (out a : string) {
+        }

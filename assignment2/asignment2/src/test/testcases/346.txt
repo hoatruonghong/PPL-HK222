@@ -1,0 +1,12 @@
+
+        main: function void () {
+        if (true)
+                if (a == true)
+                    if (b == false)
+                        if (1)
+                            a = 2;
+                        else
+                            b = 5;
+                    else
+                        a = 5;      
+        }

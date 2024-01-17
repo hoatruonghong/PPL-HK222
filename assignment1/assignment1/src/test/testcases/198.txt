@@ -1,0 +1,12 @@
+
+main : function void() {                                       
+// first block
+{
+    // second block
+    {
+        // third block
+        {
+            // fourth block
+        }
+    }
+}}

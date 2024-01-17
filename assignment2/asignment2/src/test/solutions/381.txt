@@ -1,0 +1,3 @@
+Program([
+	FuncDecl(main, VoidType, [], None, BlockStmt([VarDecl(a, StringType, FuncCall(readString, [])), VarDecl(b, StringType, FuncCall(readString, [])), IfStmt(BinExpr(==, FuncCall(length, [Id(a)]), FuncCall(length, [Id(b)])), ReturnStmt(), CallStmt(update, ))]))
+])

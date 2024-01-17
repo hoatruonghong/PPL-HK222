@@ -1,0 +1,3 @@
+Program([
+	FuncDecl(main, VoidType, [], None, BlockStmt([DoWhileStmt(Id(a), BlockStmt([WhileStmt(Id(b), DoWhileStmt(Id(c), BlockStmt([CallStmt(printString, StringLit(My name is Hoa))])))]))]))
+])

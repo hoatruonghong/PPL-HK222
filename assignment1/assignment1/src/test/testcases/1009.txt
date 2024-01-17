@@ -1,0 +1,3 @@
+
+            True : string = "It's true!" 
+            false : string = "it's not true..." 

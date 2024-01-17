@@ -1,0 +1,5 @@
+Program([
+	VarDecl(average, FloatType, FloatLit(0.0))
+	VarDecl(beginString, StringType, StringLit())
+	FuncDecl(main, VoidType, [], None, BlockStmt([AssignStmt(Id(beginString), StringLit(hello world)), AssignStmt(Id(average), BinExpr(/, Id(sum), Id(number)))]))
+])

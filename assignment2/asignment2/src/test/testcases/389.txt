@@ -1,0 +1,15 @@
+
+            main : function void() {
+                x = a() + b()*c(d);
+                if (x < a(arr[0,i])) return;
+                x = x / max(x,y+sub(x-y));
+                for (i = 1, i < n , i/2) {
+                    {
+                        k : integer = 0;
+                        k = i;
+                        if (k < 10 ) break;
+                    }
+                }
+                print("The result is ",x);
+            }
+        

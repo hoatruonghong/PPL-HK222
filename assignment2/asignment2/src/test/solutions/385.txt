@@ -1,0 +1,5 @@
+Program([
+	FuncDecl(printAnimal, VoidType, [OutParam(animal, StringType), Param(num, IntegerType)], None, BlockStmt([]))
+	FuncDecl(printBird, VoidType, [Param(bird, StringType)], printAnimal, BlockStmt([]))
+	FuncDecl(main, VoidType, [], None, BlockStmt([VarDecl(birds, ArrayType([2, 3], StringType), ArrayLit([ArrayLit([StringLit(birdA), StringLit(birdB), StringLit(birdC)]), ArrayLit([StringLit(birdX), StringLit(birdY), StringLit(birdZ)])])), CallStmt(printBird, ArrayCell(bird, [ArrayCell(a, [Id(i)]), IntegerLit(2)])), ReturnStmt()]))
+])

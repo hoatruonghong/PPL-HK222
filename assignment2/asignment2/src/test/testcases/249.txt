@@ -1,0 +1,5 @@
+pi : float = 3.14;
+            main: function void () {
+                area = 123 ;
+                length, width = 3.0, 2;
+            } 

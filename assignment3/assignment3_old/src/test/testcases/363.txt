@@ -1,0 +1,8 @@
+
+        main: function void () {  
+                do {
+                    x,delta : integer = 1, readInteger();
+                    a = toInt( a -x/delta );                    
+                }
+                while(a);
+        }

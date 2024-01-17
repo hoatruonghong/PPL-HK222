@@ -1,0 +1,3 @@
+Program([
+	VarDecl(b, BooleanType, BinExpr(!=, IntegerLit(1), BinExpr(||, IntegerLit(2), BinExpr(==, IntegerLit(0), FloatLit(0.1)))))
+])

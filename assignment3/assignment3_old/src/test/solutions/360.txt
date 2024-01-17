@@ -1,0 +1,3 @@
+Program([
+	FuncDecl(main, VoidType, [], None, BlockStmt([WhileStmt(BinExpr(==, ArrayCell(arr, [Id(a), Id(b)]), StringLit(Cat)), IfStmt(BinExpr(==, Id(a), IntegerLit(1)), WhileStmt(BinExpr(==, Id(x), Id(y)), AssignStmt(Id(x), FuncCall(update, [Id(x)]))), WhileStmt(BooleanLit(False), BlockStmt([]))))]))
+])

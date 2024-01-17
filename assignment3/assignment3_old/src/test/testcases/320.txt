@@ -1,0 +1,5 @@
+
+        a1, a2 : string = "Hello ", "World!" ;
+        a: string = a1 :: a2 ;            
+        a: string = (a :: ( a :: "a" ) ) :: a;        
+        

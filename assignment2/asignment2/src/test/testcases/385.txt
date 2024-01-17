@@ -1,0 +1,11 @@
+
+            printAnimal : function void(out animal: string, num: integer) {                
+            }
+            printBird : function void(bird : string) inherit printAnimal {
+            }
+            main: function void() {
+                birds : array[2,3] of string = {{"birdA", "birdB", "birdC"},{"birdX", "birdY", "birdZ"}};
+                printBird(bird[a[i], 2]);
+                return ;
+            }
+        

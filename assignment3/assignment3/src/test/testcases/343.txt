@@ -1,0 +1,8 @@
+
+        main: function void () {
+                if (a>b) 
+                    if (true) print(1);
+                    else if (a <= 0) print(2);
+                         else a = -a;
+                else print(3);            
+        }

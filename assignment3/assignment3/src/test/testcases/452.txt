@@ -1,0 +1,11 @@
+
+	
+		bar: function integer (x: boolean) inherit foo {
+			preventDefault();
+			return 2;
+		}
+		foo: function integer (inherit x: boolean) {
+			return 1;
+		}
+		//main : function void () {}
+		

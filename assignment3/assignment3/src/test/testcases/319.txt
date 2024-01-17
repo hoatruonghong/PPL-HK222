@@ -1,0 +1,5 @@
+
+        a : boolean = true ;
+        b : boolean = !a && false || (false && true || true) ;  
+        c : boolean = !!b || false ;
+        

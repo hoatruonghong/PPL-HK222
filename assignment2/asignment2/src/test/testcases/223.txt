@@ -1,0 +1,2 @@
+x , y : auto ;
+                    a1, a2 : string = "a1", "a2", "a3" ;

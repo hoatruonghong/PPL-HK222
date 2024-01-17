@@ -1,0 +1,42 @@
+https://e-learning.hcmut.edu.vn/mod/forum/discuss.php?d=9236
+
+    funccall :
+- gọi hàm trùng tên với name
+
+
+
+    super:
+- super() type mismatch với kiểu của hàm cha -> typemismatchinexper(expr lỗi đầu)
+len(arg) > len(param) ⇨ raise TypeMismatchInExpression với arg dư thừa đầu tiên   ## mình vẫn thắc mắc nếu arg trước đó bị khác kiểu thì sao
+len(arg) < len(param) ⇨ raise TypeMismatchInExpression với đầu vào rỗng
+len(arg) == len(param) nhưng có cặp arg & param không khớp kiểu ⇨ raise TypeMismatchInExpression với arg đầu tiên không khớp kiểu
+-Đối với lời gọi hàm super thì mình sẽ quăng lỗi TypeMisMatchInExpression(<error arg>) có thể rỗng.
+
+
+
+    preventDefault: --ing
+Với việc gọi preventDefault(1) thì raise lỗi tương tự như raise lỗi trong super? 
+    -> TypeMismatchInExpression(intergerlit(1))
+                           
+
+    inherit:
+- check hàm cha có tồn tại -> kiểm tra hàm con
+- return type hàm cha với con có giống nhau
+
+
+    return:
++ Return không nằm trong stmt nào cả. Thì ta chỉ xét kiểu với lần return đầu tiên. Các lần return sau đó ta không bàn đến kiểu nữa. Nhưng ta cũng phải quan tâm đến kiểu của các câu lệnh đằng sau nó.
++ Return nằm trong 1 stmt: ví dụ như nằm trong if và nằm ở ngoài. Thì ta sẽ buộc phải xét kiểu của 2 lần này. Có nghĩa là em nếu nó nằm trong stmt bắt buộc phải kiểm tra kiểu. Còn nếu nằm ngoài thì ta quan tâm lần return đầu tiên mà không quan tâm đến các return sau nó nữa. 
+
+
+    kiểu:
+Các operand's được mô tả float/int thì cả 2 vế đều có thể là 1 trong 2.
+Chuyển đổi ngầm định giữa int và float là cho phép
+
+
+    Redeclared
+Khi khai báo cùng tên nhưng khác kiểu trong 1 scope ta sẽ áp dụng những điều mô tả trong mục 3.1 assignment 3. Là second kind nha.
+
+
+    Assign:
+Xét lhs -> rhs

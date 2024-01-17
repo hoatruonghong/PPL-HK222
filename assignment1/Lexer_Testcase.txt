@@ -1,0 +1,142 @@
+blank	 
+tab	\t
+backspace \b
+form feed \f
+carriage return \r	di chuyển con trỏ về đầu dòng
+newline \n
+
+// identifiers 					tc 110 - 120
+	begin with A-Z, a-z, _
+	contain A-Z, a-z, _, 0-9
+// keywords
+	auto, break, boolean, do, else, 
+	false, float, for, function, if, 
+	integer, return, string, true, void,
+	while, void, function, out, continue,
+	of, inherit
+// operators
+	+	-	*	/ 	%
+	!	&&	||	==	
+	!=	< 	<=	> 	>=
+	::
+// seperators					
+	() [] . , ; : {} =
+// comments					tc 100 - 110
+	/*  */
+	//
+// literals - value				
+	int: 0 or non-zero			tc 120 - 130
+		base10 (0-9)
+		contain _  -> scanner removes
+	float: 3 components: integer, decimal, exponent part 			tc 130 - 140
+		1 trong 3 thành phần có thể vắng mặt trong số
+		integer: same format
+		decimal: .(0-9)
+		exponent: [eE][-+][0-9]+
+		1.234	1.2e3	7E-10	1_234.567		
+	boolean					
+		true	false
+	string: "...."				tc 140 - 150
+		escape sequences represent special characters within a string
+			\b	\f	\r	\n	\t	\'	\\
+			nếu có " trong string, thì dùng thêm \ -> "\"s"
+	array: indexed array			
+		{1, 5, 7, 12} {"Ka", "Ca"}
+
+
+// types 
+Atomic types
+	boolean type ! && || == !=
+	integer type + - * / % == != > >= < <=
+	float type   + - * /   == != > >= < <=
+	string type ::
+Array type	array [<dimensions>] of <element_type>
+	<element_type> là 1 trong 4 atomic type trên
+	<dimensions> comma-seperated list of int
+	
+	array [2, 3] of integer: array 2 chiều, size của chiều 1st là 2 và 2nd là 3
+	truy cập phần tử: a[0,0], a[0,1], a[0,2], a[1,0], a[1,1], a[1,2]
+Void type
+Auto type
+	
+// variable declarations: global, local, parameters
+	variables
+		<identifier-list> : <type>;
+		
+		<identifier-list> : <type> [= <expression-list>]?;
+	parameters
+		[out]? <identifier> : <type>
+
+// function declarations
+	function prototype and function body
+	
+	<identifier> : function <return-type> (<parameter-list>) [inherit <function-name>]?
+	
+	x: int = 65;
+	fact: function int (n:int) {
+		if (n == 0) return 1;
+		else return n*fact(n-1);
+	}
+	inc: function void (out n:int, delta: int){
+		n = n + delta;
+	}
+	main: function void() {
+		delta: int = fact(3);
+		inc(x, delta);
+		printint(x);
+	}
+
+// expressions
+2 loại: unary vs binary
+operands: constants, variables, data returned by another operator, data returned
+	by a function call.
++ arithmetic
++ boolean
++ string
++ relational
++ index: <identifier> [<expression-list>]
+
+function call: <function-name>(<param-list>)
+
+
+// statements
+Assignment		<lhs> = <expression>;
+If			if (<expression>) <true-statement> [else <false-statement>]?
+For			for (<scalar-variable> = <int-expr>, <condition-expr>, <update-expr>)
+				<statement>
+	<int-expr> type only int
+
+While			while (<expression>)
+				<statement>
+Do-while		do 
+				<block-statement>
+			while (<expression>);
+Break			break;
+Continue		continue;
+Return 			return <expression>| ;
+Call			
+Block			{ <statement>* }
+
+// special functions
+readInt()
+printInt(anArg: int)
+readFloat()
+printFloat(anArg: float)
+readBoolean()
+printBoolean(anArg: boolean)
+readString()
+printString(anArg: string)
+super(<expr-list>)
+preventDefault()
+
+
+
+
+
+
+
+
+
+
+
+

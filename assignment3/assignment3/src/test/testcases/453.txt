@@ -1,0 +1,11 @@
+
+		a : integer = 1;
+		foo: function auto () {
+			return;
+		}
+
+		main : function void () {
+			foo();
+			a = foo();
+		}
+		

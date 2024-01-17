@@ -1,0 +1,1 @@
+a,:,integer,=,0,;,main,:,function,void,(,),{,return,a,;,},<EOF>

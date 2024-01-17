@@ -1,0 +1,6 @@
+
+        main: function void () {
+              if (a>b) {}
+              else a = "This is 'else' ";                
+              
+        }

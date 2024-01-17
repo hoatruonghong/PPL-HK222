@@ -1,0 +1,5 @@
+
+            main: function void () {
+                area = 123 ;
+                length = 3.0, 2;
+            } 

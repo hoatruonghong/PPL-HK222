@@ -1,0 +1,10 @@
+
+        main: function void () {
+                if (a==c)
+                        if (b==d)
+                            if(lv==2) 
+                                continue;
+                            else c = a[c+1];
+                        else return;
+                else break;     
+        }

@@ -1,0 +1,29 @@
+
+        main: function void () {
+        if (a){
+                b = a;
+                c = a; 
+                if (c != a){
+                    c = a;
+                    b = c;
+                }
+                else{
+                    if (c == a){
+                        d : boolean;
+                        d = e;
+                        d = b;
+                    }
+                    else{
+                        if (!d){
+                            y: float;
+                        }
+                    }
+                }
+            }
+            else{
+                if (!a){
+                    d : string;
+                    d = a;
+                }
+            }
+        }

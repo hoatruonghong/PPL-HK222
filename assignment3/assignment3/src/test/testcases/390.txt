@@ -1,0 +1,14 @@
+
+            main : function void() {
+                arr : array[7] of integer = {5, 4, 9, 1, 4, 6, 3 };
+                n : integer = sizeof(arr)/sizeof(arr[0]);
+                pair1, pair2 : integer;
+                if (findPairs(arr, n, pair1, pair2)) {
+                    if (checkAnswer(arr, n, pair1, pair2)){
+                        printString("Your answer is correct.");                    
+                    }
+                    else printString("Your answer is incorrect.");
+                }
+                else printString("No pair found.");
+            }
+        

@@ -1,0 +1,27 @@
+
+            main : function void() {
+                a, b, c, delta, root1, root2, realPart, iPart : float;
+                printString("Enter coefficients a, b, c: ");
+                a = readFloat();
+                b = readFloat();
+                c = readFloat();
+                delta = b*n - 4*a*c;
+                // condition for real and different roots
+                if (delta > 0) {
+                    root1 = (-b+sqrt(delta))/(2*a);
+                    root2 = (-b-sqrt(delta))/(2*a);
+                    print("root1 = ", root1," and root2 = ", root2); 
+                }
+                else if (delta == 0) {
+                    root1 = -b/(2*a);
+                    root2 = root1;
+                    print("root1 = ", root1," and root2 = ", root2);                     
+                }
+                else // if roots are not real
+                {
+                    realPart = -b/(2*a);
+                    iPart = sqrt(-delta)/(2*a);
+                    print("root1 = ", realPart+iPart," and root2 = ",  realPart-iPart);                     
+                }
+            }
+        

@@ -1,0 +1,13 @@
+
+            x, y, i : integer;
+            main: function void(){
+                for(i=0,i<10,i+1)
+                    arr[i]=i;
+                for(i=0,i<10,i+1)
+                    if(arr[i]%2==0)
+                        x = x + arr[i];
+                    else
+                        return y + arr[i];
+                print(x,y);
+            }
+        

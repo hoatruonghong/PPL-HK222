@@ -1,0 +1,5 @@
+
+            round : function integer(n: float, i: integer){}
+            main: function void () {
+                a : integer = round(1.23-1.496, b) ;
+            } 

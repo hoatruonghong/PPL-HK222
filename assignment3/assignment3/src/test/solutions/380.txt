@@ -1,0 +1,3 @@
+Program([
+	FuncDecl(main, VoidType, [], None, BlockStmt([VarDecl(a, IntegerType, BinExpr(+, FuncCall(callA, []), IntegerLit(1))), AssignStmt(Id(b), FuncCall(_writeInt, [])), VarDecl(c, IntegerType, BinExpr(-, FuncCall(toInteger, [FuncCall(sum, [BinExpr(+, Id(a), Id(b))])]), FuncCall(min, [Id(a), Id(b)]))), CallStmt(print, Id(a), Id(b), Id(c))]))
+])

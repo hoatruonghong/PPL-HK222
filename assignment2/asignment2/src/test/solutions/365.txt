@@ -1,0 +1,3 @@
+Program([
+	FuncDecl(main, VoidType, [], None, BlockStmt([DoWhileStmt(BinExpr(<, Id(i), IntegerLit(5)), BlockStmt([DoWhileStmt(BinExpr(<=, Id(i), IntegerLit(10)), BlockStmt([AssignStmt(Id(i), IntegerLit(0)), DoWhileStmt(BinExpr(==, Id(c), BooleanLit(True)), BlockStmt([BlockStmt([]), CallStmt(increase, Id(count))]))])), AssignStmt(Id(i), BinExpr(/, Id(count), Id(n))), CallStmt(calc, Id(i), FuncCall(random, []))]))]))
+])

@@ -1,0 +1,1 @@
+1 Cat + 2 Dogs ::::: 12 Birds, 3 Spiders in the picture.,<EOF>

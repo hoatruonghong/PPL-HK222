@@ -1,0 +1,6 @@
+
+            main: function void () {
+                a = true ;
+                b = !a && false || (false && true || true) ;  
+                c = !!b || false ;             
+            }

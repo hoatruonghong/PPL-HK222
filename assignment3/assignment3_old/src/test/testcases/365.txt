@@ -1,0 +1,16 @@
+
+        main: function void () {
+        do{
+                do {
+                        i=0;  
+                        do
+                        {
+                                {}
+                                increase(count);
+                        }
+                        while(c==true);
+                }while(i<=10);
+                i=count/n;
+                calc(i, random());
+        }while(i < 5); 
+        }

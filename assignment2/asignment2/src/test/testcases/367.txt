@@ -1,0 +1,8 @@
+
+        main: function void () {  
+                do {
+                    if (a == 5) break;
+                    while (b != a) update(b,a);                   
+                }
+                while(a);
+        }

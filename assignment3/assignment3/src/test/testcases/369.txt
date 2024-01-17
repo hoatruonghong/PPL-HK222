@@ -1,0 +1,13 @@
+
+        main: function void () {  
+                do {
+                    while(a%2 == 1) 
+                        if (i < 0) break;
+                        else continue;
+                    {
+                        {  
+                        }
+                    }
+                }
+                while(a);
+        }

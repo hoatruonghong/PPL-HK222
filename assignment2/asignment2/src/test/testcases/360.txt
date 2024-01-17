@@ -1,0 +1,8 @@
+
+        main: function void () {  
+                while (arr[a,b] == "Cat")
+                        if (a == 1)
+                                while (x == y) x = update(x);
+                        else while(false) {}
+                
+        }

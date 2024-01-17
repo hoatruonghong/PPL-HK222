@@ -1,0 +1,8 @@
+
+		a: function integer (x: integer, y: integer) {
+			return x;
+		}
+		main: function void () {
+			a(4, 2.0);
+		}
+		

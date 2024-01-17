@@ -1,0 +1,6 @@
+
+            pi : float = genPi();
+            area = pi * sqr(r);
+            main: function void () {
+                return;
+            } 

@@ -1,0 +1,10 @@
+
+		c: function integer () {
+		}
+		m: function auto (inherit b: auto){
+			a: integer = 1+ 2 + m(25) + 6/5;
+			b = (a - c())> 5;
+			return b;
+        }
+		main: function void () {}
+		

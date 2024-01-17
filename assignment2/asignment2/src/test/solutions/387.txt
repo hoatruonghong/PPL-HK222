@@ -1,0 +1,4 @@
+Program([
+	VarDecl(a, FloatType, BinExpr(+, BinExpr(%, BinExpr(/, BinExpr(*, Id(x), Id(x)), IntegerLit(2)), IntegerLit(2)), BinExpr(*, BinExpr(%, Id(c), IntegerLit(10)), FloatLit(3.0))))
+	FuncDecl(main, VoidType, [], None, BlockStmt([AssignStmt(ArrayCell(arr, [Id(i), IntegerLit(0)]), BinExpr(+, ArrayCell(a, [ArrayCell(b, [BinExpr(-, BinExpr(+, BinExpr(-, BinExpr(+, Id(x), ArrayCell(y, [IntegerLit(1), IntegerLit(2), IntegerLit(2), IntegerLit(0), IntegerLit(0)])), BinExpr(*, ArrayCell(h, [BinExpr(*, ArrayCell(g, [BinExpr(%, IntegerLit(5), IntegerLit(2))]), ArrayCell(t, [IntegerLit(0), ArrayCell(t, [IntegerLit(1)])]))]), IntegerLit(8))), IntegerLit(1)), UnExpr(-, IntegerLit(1)))])]), IntegerLit(3))), VarDecl(b, BooleanType, BinExpr(&&, BinExpr(!=, IntegerLit(5), IntegerLit(6)), BinExpr(||, BinExpr(>, BinExpr(+, IntegerLit(4), IntegerLit(5)), IntegerLit(7)), UnExpr(!, BinExpr(&&, BooleanLit(False), BinExpr(||, BooleanLit(False), BooleanLit(True)))))))]))
+])

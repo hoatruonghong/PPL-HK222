@@ -1,0 +1,6 @@
+main: function void () {
+                while (false) {
+                    s = add(2,3,4,5);
+                    print(s);
+                }
+            } 

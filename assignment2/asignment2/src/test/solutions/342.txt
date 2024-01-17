@@ -1,0 +1,3 @@
+Program([
+	FuncDecl(main, VoidType, [], None, BlockStmt([IfStmt(FuncCall(isEmpty, [Id(listA)]), IfStmt(BooleanLit(True), CallStmt(print, StringLit(true)), CallStmt(print, StringLit(false))), CallStmt(print, Id(b)))]))
+])

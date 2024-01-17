@@ -1,0 +1,13 @@
+
+            main : function void() {
+                for (i = n,  i >= 0 , i - 1 ){
+                    printString("Enter value of line "::tostring(i));
+                    for ( j = 0, j < n, j +1) {
+                        Print("Enter value of a[",i,",",j,"] : ");
+                        arr[i,j] = readString();
+                    }                    
+                }
+                print("Length of array arr is ", len(arr));
+                return;
+            }
+        

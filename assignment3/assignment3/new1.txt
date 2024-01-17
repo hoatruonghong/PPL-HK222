@@ -1,0 +1,317 @@
+from Visitor import Visitor
+from StaticError import *
+from AST import *
+
+class MType:
+    def __init__(self, partype, rettype):
+        self.partype = partype  # params type -> list   có thể để dùng cho funcall
+        self.rettype = rettype  # return type
+
+class Symbol:
+    def __init__(self, name, mtype, inheritparams = [] or None):
+        self.name = name
+        self.mtype = mtype
+        self.inheritparams = inheritparams # [Symbol("a",IntegerType())]
+"""
+a : integer = 1;   
+foo : function integer(a: integer, b: string) {
+    c = a;
+}
+main: function void () {
+    b = 3;
+}
+b: float;
+
+o = [[a, main]]
+
+
+Vì cần check main nên phải đi qua ít nhất 2 lần
+Thứ tự khai báo không quan trọng nên đi qua thêm lần nữa để hốt hết biến được khai báo
+thứ tự của hàm hay biến ??
+
+?? Thứ tự các lỗi nếu có nhiều lỗi trên một chương trình
+?? Hàm cùng tên nhưng khác type được không? cùng tên cùng type nhưng khác params được không? 
+Nếu được thì trường hợp cùng tên cùng tham số, nhưng cả hai đều kiểu auto suy diễn ra khác -.- hơi dô lý nhờ >,< => bỏ qua ik
+
+
+"""
+
+""" 
+    foo: function (x: integer){
+        x: integer = x; // redeclared param/vardecl
+    }
+"""
+
+class StaticChecker(Visitor):
+    def __init__(self, ast):
+        self.ast = ast
+        self.has_entry_point = False
+    
+    def check(self):
+        return self.visit(self.ast, [])
+
+    def visitProgram(self, ast, global_env): 
+        # decls: List[Decl]
+        #built-in function is in global scope
+        global_env = [
+            Symbol("readInteger", MType([], IntegerType())),
+            Symbol("readFloat", MType([], FloatType())),
+            Symbol("readBoolean", MType([], BooleanType())),
+            Symbol("readString", MType([], StringType())),
+            Symbol("printInteger", MType([IntegerType()], VoidType())),
+            Symbol("printFloat", MType([FloatType()], VoidType())),
+            Symbol("printBoolean", MType([BooleanType()], VoidType())),
+            Symbol("printString", MType([StringType()], VoidType())) 
+        ]
+        o = [global_env]
+        #print(o[0][-1].name)
+        """  
+        o = [[],[Symbol("a", IntegerType()), Symbol("main",MType([],VoidType()))]]
+        
+        nếu type(o[0][0].mtype) is MType thì nó là function
+        
+        """
+        
+        #print(o[0][0].name,type(o[0][0].mtype) is MType)
+        for decl in ast.decls:
+            o = self.visit(decl, o)
+            #print("o1: ", o)
+            
+        # check main function exist
+        if not self.has_entry_point:
+            raise NoEntryPoint()
+
+        return []
+            
+
+    def visitVarDecl(self, ast, o): 
+        # name: str, typ: Type, init: Expr or None = None
+        #print(ast)
+        # print("o: ",o[0][-1].name)
+        for decl in o[0]:
+            if decl.name == ast.name:
+                raise Redeclared(Variable(),ast.name)
+        if type(ast.typ) is AutoType:
+            if not ast.init :
+                raise Invalid(Variable(), ast.name)
+            else:
+                # suy diễn kiểu
+                init_typ = self.visit(ast.init, o)               
+                ast.typ = init_typ
+        
+        # kích thước array có bằng kích thước arraylit
+        if type(ast.typ) is ArrayType:
+            # ArrayType: dimensions: List[int], typ: AtomicType
+            dim = ast.typ.dimensions  # [3]
+            typ_cell = ast.typ.typ           # integer
+            if ast.init:
+                init = self.visit(ast.init, o)  #(type, length)
+                if type(init[0]) != type(typ_cell):
+                    raise TypeMismatchInVardecl(ast)
+            
+        else: # atom type: int, float, bool, string
+            if ast.init: # có init => kiểm tra về tương thích kiểu
+                init_typ = self.visit(ast.init, o)
+                if type(ast.typ) is FloatType and type(init_typ) is IntegerType:
+                    if type(ast.init) is IntegerLit :
+                        ast.init = FloatLit(float(ast.init.val))
+                    
+                    #  arraytype
+                elif type(ast.typ) is not type(init_typ):
+                    raise TypeMismatchInVardecl(ast)
+        
+        #print("Vardecl: ",ast)        
+        o[0].append((Symbol(ast.name, ast.typ)))   
+        print(vars(o[0][-1]))
+        #print(o[0][-1].mtype)
+        return o
+        
+    def visitParamDecl(self, ast, o): 
+    # name: str, typ: Type, out: bool = False, inherit: bool = False
+        #print("in param: ", o)
+        for param_decl in o[0]:
+            if param_decl.name == ast.name:
+                raise Redeclared(Parameter(), ast.name)
+        
+        # thêm vào local list
+        o[0].append(Symbol(ast.name, ast.typ))
+
+        # thêm vào type hàm partypes -> rettype 
+        func = o[-1][-1].inheritparams
+        o[-1][-1].mtype.partype.append(ast.typ)
+        
+        # nếu là tham số có inherit của hàm cha thì thêm vào symbol của hàm (name, type, [])
+        if ast.inherit:
+            o[-1][-1].inheritparams.append(Symbol(ast.name, ast.typ))
+               
+        return o
+        
+    def visitFuncDecl(self, ast, o): 
+    # name: str, return_type: Type, params: List[ParamDecl], inherit: str or None, body: BlockStmt
+
+        for decl in o[0]:
+            if decl.name == ast.name:
+                raise Redeclared(Function(),ast.name)
+        if ast.name == "main" and type(ast.return_type) is VoidType and len(ast.params) == 0:
+            self.has_entry_point = True
+        
+        o[0].append(Symbol(ast.name, MType([],ast.return_type), []))
+        
+        env = [[]] + o
+        
+        """nếu có thừa kế 
+        check tên hàm thừa kế đã tồn tại chưa
+        lấy các tham số inheritparams của hàm cha thêm vào local scope của hàm
+        ?? có thêm vào type params của hàm hong? -.- tạm thời mình đã thêm"""
+        if ast.inherit:
+            is_parentfunc_declared = False
+            for parentfunc in o[-1]:
+                if parentfunc.name == ast.inherit:
+                    is_parentfunc_declared = True
+                    # thêm params vào local scope của hàm
+                    inheritparams = parentfunc.inheritparams
+                    for param in inheritparams:
+                        env[0].append(param)
+                        #print(vars(param))  
+                        # thêm vào type params của hàm
+                        env[-1][-1].mtype.partype.append(param.mtype)
+                    break
+                
+            if not is_parentfunc_declared:
+                raise Undeclared(Function(),ast.inherit)
+        
+        for param in ast.params:
+            env = self.visit(param, env)
+                               
+        ## visit body : BlockStmt
+        self.visit(ast.body, env)
+
+        return o
+
+    def visitBlockStmt(self, ast, o): 
+    #  body: List[Stmt or VarDecl]
+        for stmt in ast.body:
+            self.visit(stmt, o)
+        
+    def visitAssignStmt(self, ast, o): pass
+    def visitIfStmt(self, ast, o): pass
+    def visitForStmt(self, ast, o): pass
+    def visitWhileStmt(self, ast, o): pass
+    def visitDoWhileStmt(self, ast, o): pass
+    def visitBreakStmt(self, ast, o): pass
+    def visitContinueStmt(self, ast, o): pass
+    def visitReturnStmt(self, ast, o): pass
+    def visitCallStmt(self, ast, o): pass
+
+    def visitBinExpr(self, ast, o): 
+        #  op: str, left: Expr, right: Expr
+        ltype = self.visit(ast.left, o)
+        rtype = self.visit(ast.right, o)
+        
+        if ast.op in ['+','-','*','/']:
+            if type(ltype) is IntegerType and type(rtype) is IntegerType:
+                return IntegerType()
+            if type(ltype) is FloatType or type(rtype) is FloatType:
+                return FloatType()
+            
+            raise TypeMismatchInExpression(ast)
+        
+        if ast.op in ['%']:
+            if not (type(ltype) is IntegerType and type(rtype) is IntegerType):
+                raise TypeMismatchInExpression(ast)
+            return IntegerType()
+        
+        if ast.op in ['&&', '||']:
+            if type(ltype) is BooleanType and type(rtype) is BooleanType:
+                return BooleanType()
+            raise TypeMismatchInExpression(ast)
+        
+        if ast.op in ['::']:
+            if type(ltype) is StringType and type(rtype) is StringType:
+                return StringType()
+            raise TypeMismatchInExpression(ast)
+            
+        if ast.op in ['==','!=']:
+            if type(ltype) is IntegerType and type(rtype) is IntegerType:
+                return BooleanType()
+            elif type(ltype) is BooleanType and type(rtype) is BooleanType:
+                return BooleanType()
+            raise TypeMismatchInExpression(ast)
+            
+        if ast.op in ['>', '<', '<=','>=']:
+            if type(ltype) is IntegerType and type(rtype) is IntegerType:
+                return BooleanType()
+            elif type(ltype) is FloatType and type(rtype) is FloatType:
+                return BooleanType()
+            raise TypeMismatchInExpression(ast)
+            
+    def visitUnExpr(self, ast, o): 
+        # op: str, val: Expr
+        valtyp = self.visit(ast.val, o)
+        
+        if ast.op == '-':
+            if type(valtyp) in [IntegerType, FloatType]:
+                return valtyp
+            raise TypeMismatchInExpression(ast)
+    
+        if ast.op == '!':
+            if type(valtyp) is BooleanType:
+                return BooleanType()
+            raise TypeMismatchInExpression(ast)
+     
+        
+    def visitId(self, ast, o): 
+        # name: str        
+        id_typ = None
+        print("id :", o)
+        for env in o:
+            for decl in env:
+                if ast.name == decl.name:
+                    id_typ = decl.mtype
+                    break
+        if not id_typ :              
+            raise Undeclared(Identifier(),ast.name)
+        return id_typ
+    
+    def visitArrayCell(self, ast, o): pass
+    
+    # kiểm tra type từng thành phần
+    # trả về size của arraylit và type của arraycell
+    def visitArrayLit(self, ast, o): 
+        # explist: List[Expr]
+        if len(ast.explist) == 0:
+            return (None, 0)
+        ele_type = self.visit(ast.explist[0],o)
+        for exp in ast.explist:
+            if type(ele_type) != type(self.visit(exp, o)) :
+                raise IllegalArrayLiteral(ast)
+        return (ele_type, len(ast.explist))
+    
+    def visitFuncCall(self, ast, o): pass
+
+
+
+
+    def visitIntegerLit(self, ast, o): 
+        return IntegerType()
+    def visitFloatLit(self, ast, o): 
+        return FloatType()
+    def visitStringLit(self, ast, o): 
+        return StringType()
+    def visitBooleanLit(self, ast, o): 
+        return BooleanType()
+    
+    def visitIntegerType(self, ast, o): 
+        return IntegerType()
+    def visitFloatType(self, ast, o): 
+        return FloatType()
+    def visitBooleanType(self, ast, o): 
+        return BooleanType()
+    def visitStringType(self, ast, o): 
+        return StringType()
+    def visitArrayType(self, ast, o): 
+        return ArrayType()
+    def visitAutoType(self, ast, o): pass
+    def visitVoidType(self, ast, o): 
+        return VoidType()
+

@@ -1,0 +1,1 @@
+" Print integer number by "printInt(anArg: int)"" 

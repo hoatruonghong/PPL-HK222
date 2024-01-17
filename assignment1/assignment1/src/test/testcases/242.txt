@@ -1,0 +1,8 @@
+
+                myPets : array[5] of string = {"Cat", "Dog", "Parot", "Pig", "Ducky"} ;
+                main : function void(){
+                    myPets [1+1] = myPets [arr[0, nArr[a,c]]-1];
+                    myPets[last] = "";
+                    printAll(myPets) ;
+                }
+            

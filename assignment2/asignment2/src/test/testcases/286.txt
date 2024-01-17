@@ -1,0 +1,11 @@
+
+        main : function void() {
+            {
+                a : integer = 5;
+                b = a* 2_0 -3 ;
+                for (i = b, i > 1 , i-1)
+                print(Array[0, i]);
+            }
+            return ;
+        }
+        

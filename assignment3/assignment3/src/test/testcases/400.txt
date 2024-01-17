@@ -1,0 +1,6 @@
+
+        area : float = 2.5;
+        an : float = 1 ;
+        x : float = true;
+        main: function void(){}
+        

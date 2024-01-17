@@ -1,0 +1,4 @@
+main: function void () {
+                a1, b2 : integer = a + 1, 0 ;
+                a  = 3;
+            }

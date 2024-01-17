@@ -1,0 +1,9 @@
+
+        main: function void () {  
+                for (i = 1, i <10, i+1) 
+                        if (i % 2 == 0) continue;
+                        else 
+                                for(j = 0, j < 10, j + 1)
+                                        print(arr[i,j]);
+                a = 1;
+        }

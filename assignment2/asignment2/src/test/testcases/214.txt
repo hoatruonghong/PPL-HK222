@@ -1,0 +1,4 @@
+
+        multiply : function integer (a, b : float,) {}
+        main: function void() {}
+        

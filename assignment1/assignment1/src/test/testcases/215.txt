@@ -1,0 +1,4 @@
+
+        _Square_Area  : function float (r: float) inherit Rectangle_Area {}
+        main: function void() {}
+        

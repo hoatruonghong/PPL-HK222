@@ -1,0 +1,3 @@
+Program([
+	FuncDecl(main, VoidType, [], None, BlockStmt([AssignStmt(Id(a), FuncCall(readInteger, [])), AssignStmt(Id(b), FuncCall(readFloat, [])), AssignStmt(Id(c), FuncCall(readBoolean, [])), AssignStmt(Id(d), FuncCall(readString, []))]))
+])

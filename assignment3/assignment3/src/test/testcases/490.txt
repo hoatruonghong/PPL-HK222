@@ -1,0 +1,12 @@
+
+		a: integer = 1;
+		int : function integer() {
+			return a;
+		}
+		main : function void () {
+			
+			int();
+			a = getInt();
+		}
+
+		

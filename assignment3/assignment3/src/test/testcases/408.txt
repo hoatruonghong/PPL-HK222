@@ -1,0 +1,6 @@
+
+        foo: function integer (){}
+        main: function void(){}
+        height, weight : integer;
+        foo : integer;
+        

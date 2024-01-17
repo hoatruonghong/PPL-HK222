@@ -1,0 +1,26 @@
+
+            /* Kiem tra mang cap so cong  */
+            isEmpty: function boolean (arr: array[10] of integer) {   
+                return true;
+            }         
+            readArray : function void(out arr: array[10] of integer){
+                
+            }
+            isArithmeticProgression: function boolean (arr: array[100] of integer) {
+                if (isEmpty(arr)) return false;
+                flag : boolean = true;
+                i, n, d: integer = 2, len(arr), arr[1]-arr[0];
+                
+                while (i < n) {
+                    if (arr[i]-arr[i-1] != d) flag = false;
+                    if (flag == false) return false;
+                    i = i +1;
+                }
+            }
+            main:  function void() {
+                Array : array [100] of integer;
+                readArray(Array);
+                if (isArithmeticProgression) printString("This is an arithmetic progression !");
+                return;
+            }
+        

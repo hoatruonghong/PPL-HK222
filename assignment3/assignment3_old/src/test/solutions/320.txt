@@ -1,0 +1,6 @@
+Program([
+	VarDecl(a1, StringType, StringLit(Hello ))
+	VarDecl(a2, StringType, StringLit(World!))
+	VarDecl(a, StringType, BinExpr(::, Id(a1), Id(a2)))
+	VarDecl(a, StringType, BinExpr(::, BinExpr(::, Id(a), BinExpr(::, Id(a), StringLit(a))), Id(a)))
+])

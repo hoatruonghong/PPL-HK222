@@ -1,0 +1,11 @@
+
+		foo: function integer (inherit x: boolean) {
+			return 1;
+		}
+
+		bar: function integer (y: boolean) inherit foo {
+			super(y);
+			return 1;
+		}
+
+		

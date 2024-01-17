@@ -1,0 +1,6 @@
+
+        UPDATE: function integer(Date: integer, n: integer){
+            calc(Date,n);
+            return Date;
+        }
+        

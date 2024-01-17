@@ -1,0 +1,10 @@
+
+		m: function auto (inherit b: auto){
+			return b;
+		}
+		b: function integer (b: integer) inherit m {
+			preventDefault();
+			a: auto;
+		}
+		main: function void () {}
+		

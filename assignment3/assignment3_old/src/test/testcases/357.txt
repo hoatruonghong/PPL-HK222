@@ -1,0 +1,4 @@
+
+        main: function void () {  
+                while (a > 0 || (b -c < 1)) print("False expr");
+        }

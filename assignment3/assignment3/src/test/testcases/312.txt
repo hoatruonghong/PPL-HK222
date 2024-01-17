@@ -1,0 +1,6 @@
+Rectangle: function void (a: float, b: integer, out c:float) {
+        }
+        Square: function void(inherit b: integer) inherit Rectangle{
+            
+        }
+        

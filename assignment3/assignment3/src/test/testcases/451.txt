@@ -1,0 +1,11 @@
+
+		m: function integer (b: integer) inherit a {
+			super(1);
+			return 1;
+		}
+		main: function void () {
+			a: integer = 1;
+		}
+		a: function integer (inherit b: integer) {
+		}
+		

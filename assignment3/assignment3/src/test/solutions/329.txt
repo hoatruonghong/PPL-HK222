@@ -1,0 +1,3 @@
+Program([
+	FuncDecl(main, VoidType, [], None, BlockStmt([CallStmt(printInteger, Id(a)), CallStmt(printFloat, Id(b)), CallStmt(printString, StringLit(string)), CallStmt(printBoolean, BooleanLit(True)), CallStmt(super, Id(a), Id(b)), CallStmt(preventDefault, )]))
+])

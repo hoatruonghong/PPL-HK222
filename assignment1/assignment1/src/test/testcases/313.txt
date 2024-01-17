@@ -1,0 +1,14 @@
+
+            fact : function integer(n : integer) {
+                a = x || y && z != x;
+                if ((n == 1 )||(n == 0)) return 1;
+                return n * fact(n-1);
+            }
+            main : function void() {
+                number : integer;
+                number = readInteger();
+                printInteger(fact(number));
+                printInteger(fact(1)*fact(2)*fact(3));
+                return;
+            }
+        

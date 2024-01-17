@@ -1,0 +1,10 @@
+
+        main: function void () {
+        if (true)
+                if (a == 0) print(a);
+                if (false) {
+                        if (true) {}
+                        if (0) {} else {}
+                }
+                else print(1)   ;
+        }

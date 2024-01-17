@@ -1,0 +1,9 @@
+
+		foo: function integer(inherit x: boolean) {
+			return 1;
+		}
+		bar : function integer (z: boolean) inherit foo {
+			super(true, z);
+		}
+		main : function void () {}
+		

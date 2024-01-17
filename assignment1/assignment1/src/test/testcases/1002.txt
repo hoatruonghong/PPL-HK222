@@ -1,0 +1,5 @@
+
+main: function void () {
+    for (i = n, , i%2) printString("Computer is working...
+");
+}

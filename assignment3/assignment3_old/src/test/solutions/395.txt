@@ -1,0 +1,6 @@
+Program([
+	FuncDecl(isEmpty, BooleanType, [Param(arr, ArrayType([10], IntegerType)), Param(n, IntegerType)], None, BlockStmt([ReturnStmt(BooleanLit(True))]))
+	FuncDecl(readArray, VoidType, [InheritParam(arr, ArrayType([10], IntegerType)), OutParam(average, FloatType)], None, BlockStmt([]))
+	FuncDecl(isArithmeticProgression, BooleanType, [Param(arr, ArrayType([100], IntegerType))], None, BlockStmt([IfStmt(FuncCall(isEmpty, [Id(arr)]), ReturnStmt(BooleanLit(False))), VarDecl(flag, BooleanType, BooleanLit(True)), VarDecl(i, IntegerType, IntegerLit(2)), VarDecl(n, IntegerType, FuncCall(len, [Id(arr)])), VarDecl(d, IntegerType, BinExpr(-, ArrayCell(arr, [IntegerLit(1)]), ArrayCell(arr, [IntegerLit(0)]))), WhileStmt(BinExpr(<, Id(i), Id(n)), BlockStmt([IfStmt(BinExpr(!=, BinExpr(-, ArrayCell(arr, [Id(i)]), ArrayCell(arr, [BinExpr(-, Id(i), IntegerLit(1))])), Id(d)), AssignStmt(Id(flag), BooleanLit(False))), IfStmt(BinExpr(==, Id(flag), BooleanLit(False)), ReturnStmt(BooleanLit(False))), AssignStmt(Id(i), BinExpr(+, Id(i), IntegerLit(1)))]))]))
+	FuncDecl(main, VoidType, [], None, BlockStmt([VarDecl(Array, ArrayType([100], IntegerType)), CallStmt(readArray, Id(Array)), IfStmt(Id(isArithmeticProgression), CallStmt(printString, StringLit(This is an arithmetic progression !))), ReturnStmt()]))
+])

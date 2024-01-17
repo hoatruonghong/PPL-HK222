@@ -1,0 +1,10 @@
+
+		m: function integer (b: integer){
+		}
+		m2: function integer (b: integer){
+			{
+				m: integer = 5;
+			}
+		}
+		main: function void () {}
+		

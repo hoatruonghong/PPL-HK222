@@ -1,0 +1,6 @@
+
+		fn: function integer (x: string) {
+			return fn("avc");
+		}
+
+		

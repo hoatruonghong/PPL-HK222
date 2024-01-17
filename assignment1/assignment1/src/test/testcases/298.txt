@@ -1,0 +1,12 @@
+
+            main : function void() {
+                a : integer ;
+                a = readInteger();
+                printInteger(a);
+                b : float = toFloat(a);
+                if ((type(b) == "float") && b == a ) {
+                    print("Type of b is float.");
+                }
+                return ;                
+            }
+        

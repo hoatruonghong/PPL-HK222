@@ -1,0 +1,11 @@
+
+		a: integer = 5;
+		b: function auto (i : auto) {
+			return i;
+		}
+		main: function void () {
+			b(a);
+			b(1);
+			a(1);
+		}
+		

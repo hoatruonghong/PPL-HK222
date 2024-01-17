@@ -1,0 +1,3 @@
+vardecl ở global:
+o.frame: 
+<class 'CodeGenerator.SubBody'> {'frame': None, 'sym': None, 'isGlobal': True}

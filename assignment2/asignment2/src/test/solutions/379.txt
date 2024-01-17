@@ -1,0 +1,3 @@
+Program([
+	FuncDecl(main, VoidType, [], None, BlockStmt([VarDecl(a, IntegerType, FuncCall(round, [FloatLit(12379.0)])), VarDecl(b, IntegerType, FuncCall(randomInt, [])), VarDecl(sum, IntegerType, BinExpr(+, BinExpr(+, Id(a), Id(b)), ArrayCell(arr, [IntegerLit(0), IntegerLit(0)]))), CallStmt(print, Id(a), Id(sum))]))
+])

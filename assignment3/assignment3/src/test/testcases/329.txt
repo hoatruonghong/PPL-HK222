@@ -1,0 +1,10 @@
+
+        main: function void () {
+                printInteger(a);    
+                printFloat(b);
+                printString("string");
+                printBoolean(true);
+                super(a,b);
+                preventDefault();
+        }
+        

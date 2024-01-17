@@ -1,0 +1,8 @@
+
+        main : function void() {
+            a, b : integer = round(123.0e2), randomInt();
+            sum : integer = a + b + arr[0,0];
+            print(a, sum);
+            return ;
+        }
+        

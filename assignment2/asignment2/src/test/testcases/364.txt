@@ -1,0 +1,8 @@
+
+        main: function void () {  
+                do {
+                        do {
+                        }
+                        while(a);
+                } while(b);
+        }
